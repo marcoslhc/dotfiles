@@ -1,0 +1,130 @@
+==> Upgrading 5 outdated packages, with result:
+vim 8.0.0300, x264 r2748, yarn 0.20.0, zeromq 4.2.1, homebrew/dupes/zlib 1.2.11
+==> Upgrading vim --with-python3
+==> Using the sandbox
+==> Downloading https://github.com/vim/vim/archive/v8.0.0300.tar.gz
+==> Downloading from https://codeload.github.com/vim/vim/tar.gz/v8.0.0300
+==> ./configure --prefix=/usr/local --mandir=/usr/local/Cellar/vim/8.0.0300/share/man --enable-multibyte --with-tlib=ncurses --enable-cscope --with-compiledby=Homebrew --enable-python3interp --enable-perlinterp --enable-rubyinterp --enable-gui=no --without-x
+==> make
+==> make install prefix=/usr/local/Cellar/vim/8.0.0300 STRIP=/usr/bin/true
+🍺  /usr/local/Cellar/vim/8.0.0300: 1,713 files, 23.3M, built in 1 minute 17 seconds
+==> Upgrading x264 
+==> Downloading https://homebrew.bintray.com/bottles/x264-r2748.sierra.bottle.tar.gz
+==> Pouring x264-r2748.sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/x264/r2748: 11 files, 3.3M
+==> Upgrading yarn 
+==> Downloading https://homebrew.bintray.com/bottles/yarn-0.20.0.sierra.bottle.tar.gz
+==> Pouring yarn-0.20.0.sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/yarn/0.20.0: 4,745 files, 17.6M
+==> Upgrading zeromq 
+==> Downloading https://homebrew.bintray.com/bottles/zeromq-4.2.1.sierra.bottle.tar.gz
+==> Pouring zeromq-4.2.1.sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/zeromq/4.2.1: 76 files, 2.3M
+==> Upgrading homebrew/dupes/zlib 
+==> Downloading https://homebrew.bintray.com/bottles-dupes/zlib-1.2.11.sierra.bottle.tar.gz
+==> Pouring zlib-1.2.11.sierra.bottle.tar.gz
+==> Caveats
+This formula is keg-only, which means it was not symlinked into /usr/local.
+
+macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+For compilers to find this software you may need to set:
+    LDFLAGS:  -L/usr/local/opt/zlib/lib
+    CPPFLAGS: -I/usr/local/opt/zlib/include
+For pkg-config to find this software you may need to set:
+    PKG_CONFIG_PATH: /usr/local/opt/zlib/lib/pkgconfig
+
+==> Summary
+🍺  /usr/local/Cellar/zlib/1.2.11: 12 files, 374.5K
+Updated 1 tap (caskroom/cask).
+Removing: /usr/local/Cellar/bfg/1.12.14... (4 files, 14.1M)
+Removing: /usr/local/Cellar/fish/2.4.0... (837 files, 6.2M)
+Removing: /usr/local/Cellar/git/2.11.0... (1,452 files, 32.4M)
+Removing: /usr/local/Cellar/gnu-sed/4.3... (10 files, 469.8K)
+Removing: /usr/local/Cellar/imagemagick/7.0.4-6... (1,520 files, 22.5M)
+Removing: /usr/local/Cellar/rust/1.14.0... (24,937 files, 242.2M)
+Removing: /usr/local/Cellar/sqlmap/1.1... (536 files, 9.6M)
+Removing: /usr/local/Cellar/vim/8.0.0249... (1,713 files, 23.3M)
+Removing: /usr/local/Cellar/x264/r2728... (11 files, 3.3M)
+Removing: /usr/local/Cellar/yarn/0.17.10... (5,638 files, 18.2M)
+Removing: /usr/local/Cellar/zeromq/4.2.0... (74 files, 2.9M)
+Removing: /usr/local/Cellar/zlib/1.2.8... (11 files, 361.6K)
+Removing: /Users/marcoslh/Library/Caches/Homebrew/bfg-1.12.14.jar... (14.1M)
+Removing: /Users/marcoslh/Library/Caches/Homebrew/fish-2.4.0.sierra.bottle.tar.gz... (1.9M)
+Removing: /Users/marcoslh/Library/Caches/Homebrew/git-2.11.0.sierra.bottle.tar.gz... (11.9M)
+Removing: /Users/marcoslh/Library/Caches/Homebrew/gnu-sed-4.3.tar.xz... (1.1M)
+Removing: /Users/marcoslh/Library/Caches/Homebrew/imagemagick-7.0.4-6.tar.xz... (7.9M)
+Removing: /Users/marcoslh/Library/Caches/Homebrew/rust-1.14.0.sierra.bottle.tar.gz... (77.2M)
+Removing: /Users/marcoslh/Library/Caches/Homebrew/sqlmap-1.1.tar.gz... (6.4M)
+==> This operation has freed approximately 495.9M of disk space.
+Already up-to-date.
+Already up-to-date.
+Already up-to-date.
+Already up-to-date.
+Already up-to-date.
+Already up-to-date.
+Already up-to-date.
+Already up-to-date.
+==> Auto-updated Homebrew!
+Updated 1 tap (homebrew/core).
+==> Updated Formulae
+fio
+
+Already up-to-date.
+Already up-to-date.
+Already up-to-date.
+==> Auto-updated Homebrew!
+Updated 3 taps (homebrew/core, homebrew/php, homebrew/science).
+==> Updated Formulae
+blueutil
+checkstyle
+fzf
+git-annex
+homebrew/php/php70-mcrypt
+homebrew/science/dealii
+homebrew/science/netcdf
+homebrew/science/radx
+msgpack
+nave
+quazip
+vim
+
+==> Upgrading 2 outdated packages, with result:
+msgpack 2.1.1, vim 8.0.0304
+==> Upgrading msgpack 
+==> Downloading https://homebrew.bintray.com/bottles/msgpack-2.1.1.sierra.bottle.tar.gz
+==> Pouring msgpack-2.1.1.sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/msgpack/2.1.1: 662 files, 5M
+==> Upgrading vim --with-python3
+==> Using the sandbox
+==> Downloading https://github.com/vim/vim/archive/v8.0.0304.tar.gz
+==> Downloading from https://codeload.github.com/vim/vim/tar.gz/v8.0.0304
+==> ./configure --prefix=/usr/local --mandir=/usr/local/Cellar/vim/8.0.0304/share/man --enable-multibyte --with-tlib=ncurses --enable-cscope --with-compiledby=Homebrew --enable-python3interp --enable-perlinterp --enable-rubyinterp --enable-gui=no --without-x
+==> make
+==> make install prefix=/usr/local/Cellar/vim/8.0.0304 STRIP=/usr/bin/true
+🍺  /usr/local/Cellar/vim/8.0.0304: 1,713 files, 23.3M, built in 1 minute 6 seconds
+Updated 2 taps (caskroom/cask, homebrew/science).
+==> Updated Formulae
+homebrew/science/pcl
+homebrew/science/vtk
+Removing: /usr/local/Cellar/msgpack/2.1.0... (660 files, 5M)
+Removing: /usr/local/Cellar/vim/8.0.0300... (1,713 files, 23.3M)
+Removing: /Users/marcoslh/Library/Caches/Homebrew/msgpack-2.1.0.sierra.bottle.tar.gz... (362.7K)
+Removing: /Users/marcoslh/Library/Caches/Homebrew/vim-8.0.0300.tar.gz... (12.4M)
+==> This operation has freed approximately 41.1M of disk space.
+==> Auto-updated Homebrew!
+Updated 1 tap (homebrew/science).
+==> Updated Formulae
+homebrew/science/hdf5
+
+==> Upgrading 1 outdated package, with result:
+homebrew/science/hdf5 1.10.0-patch1
+==> Upgrading homebrew/science/hdf5 
+==> Downloading https://homebrew.bintray.com/bottles-science/hdf5-1.10.0-patch1.sierra.bottle.tar.gz
+==> Pouring hdf5-1.10.0-patch1.sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/hdf5/1.10.0-patch1: 193 files, 12.6M
+Already up-to-date.
+Removing: /usr/local/Cellar/hdf5/1.8.18... (181 files, 10.6M)
+Removing: /Users/marcoslh/Library/Caches/Homebrew/hdf5-1.8.18.sierra.bottle.1.tar.gz... (3.5M)
+==> This operation has freed approximately 14M of disk space.
