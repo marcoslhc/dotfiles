@@ -69,6 +69,9 @@ copy_files_git() {
 		.gitconfig.results
 	)
 
+	for file in ${linked_dotfiles[@]}; do
+		link_file "${BASEDIR}/${file}" "${BASEDIR}/test/${file}"
+	done
 
 }
 
@@ -112,4 +115,5 @@ prompt_continue() {
 }
 
 configure_git
+#copy_files_git
 #init
