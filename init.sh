@@ -12,6 +12,7 @@ load_libs() {
 		colors
 		interaction
 		utils
+		git
 		homebrew
 	)
 
@@ -31,60 +32,31 @@ else
 	info:sm "Writing logs to ${reset}${bold}${purple}${LOGSDIR}${reset}"
 fi
 
-is_macos () { if [ "$(uname -s)" == "Darwin" ]; then return 0; else return 1; fi }
-
-is_linux () { if test "$(expr substr $(uname -s) 1 5)" = "Linux"; then return 0; else return 1; fi }
-
-configure_git () {
-	local git_credential="cache"
-
-	if is_macos; then
-		git_credential="osxkeychain"
-	fi
-
-	header "Configuring Git"
-
-	prompt "What is your author name"
-	read_input git_authorname
-
-	prompt "Wath is your author email"
-	read_input git_authoremail
-
-	render_template \
-		"AUTHOR_NAME=${git_authorname}" \
-		"AUTHOR_EMAIL=${git_authoremail}" \
-		"HELPER=${git_credential}" \
-		"${TEMPLATEDIR}/.gitconfig.template" "${TEMPLATEDIR}/.gitconfig.results"
-
-	success:sm "Git Configured"
-}
-
-copy_files_git() {
-	local linked_dotfiles=(
-		.gitattributes
-		.gitignore
+link_dotfiles() {
+	local dotfiles=(
+		.aliases
+		.bash_profile
+		.bash_prompt
+		.bashrc
+		.curlrc
+		.editorconfig
+		.exports
+		.functions
+		.gdbinit
+		.gvimrc
+		.hgignore
+		.hushlogin
+		.inputrc
+		.macos
+		.osx
+		.path
+		.screenrc
+		.tmux.conf
+		.vimrc
+		.wgetrc
+		tmux.sh
 	)
-
-	local generated_dotfiles=(
-		.gitconfig.results
-	)
-
-	for file in ${linked_dotfiles[@]}; do
-		link_file "${BASEDIR}/${file}" "${BASEDIR}/test/${file}"
-	done
-
 }
-
-link_file() {
-	local success_message="Successfully linked ${reset}${bold}${purple}${2}${reset} to ${reset}${bold}${purple}${1}${reset}"
-	local srcfile=$1
-	local dstfile=$2
-
-	ln -s "${srcfile}" "${dstfile}"
-	success:sm "${success_message}"
-}
-
-
 init () {
 	header "${reset}${bold}Installing ${blue}.dotfiles${reset}"
 	prompt_continue
@@ -114,6 +86,4 @@ prompt_continue() {
 	return 0
 }
 
-configure_git
-#copy_files_git
-#init
+init

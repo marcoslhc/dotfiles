@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 render_template() {
 	local template="${@: -2: 1}"                # get the parameter before last
 				#         |  |___________________ 1 parameter
@@ -24,4 +25,17 @@ render_template() {
 
 	#execute the substitutions
 	sed -E "${context[@]}" $template > $dest
+}
+
+is_macos () { if [ "$(uname -s)" == "Darwin" ]; then return 0; else return 1; fi }
+
+is_linux () { if test "$(expr substr $(uname -s) 1 5)" = "Linux"; then return 0; else return 1; fi }
+
+link_file() {
+	local success_message="Successfully linked ${reset}${bold}${purple}${2}${reset} to ${reset}${bold}${purple}${1}${reset}"
+	local srcfile=$1
+	local dstfile=$2
+
+	ln -s "${srcfile}" "${dstfile}"
+	success:sm "${success_message}"
 }
