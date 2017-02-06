@@ -34,6 +34,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'mileszs/ack.vim'
 call vundle#end()
 
 set rtp+=~/Documents/Projects/repos/powerline/powerline/bindings/vim
@@ -209,3 +210,7 @@ let g:airline_theme='breezy'
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
