@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
+source "./lib/config.sh"
 # gets the dir in which the script was called
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+TEMPLATEDIR="${BASEDIR}/${TEMPLATEDIR}"
+LOGSDIR="${BASEDIR}/${LOGSDIR}"
 
 # as soon as a command returns != 0 exits
 set -e
 
 load_libs() {
 	local libs=(
-		config
 		colors
 		interaction
 		utils
@@ -24,6 +26,16 @@ load_libs() {
 }
 
 load_libs
+
+log_config() {
+	header "Installing using config"
+	info:sm "Installing onto:         ${bold}${purple}${HOMEDIR}${reset}"
+	info:sm "Using dotfiles from:     ${bold}${purple}${BASEDIR}${reset}"
+	info:sm "Using templates from:    ${bold}${purple}${TEMPLATEDIR}${reset}"
+	info:sm "Writing logs to:         ${bold}${purple}${LOGSDIR}${reset}"
+	info:sm "Backup will be done in:  ${bold}${purple}${BACKUPDIR}${reset}"
+	separator
+}
 
 if ! [[ -d $LOGSDIR ]]; then
 	mkdir -p $LOGSDIR;
@@ -42,7 +54,6 @@ link_dotfiles() {
 		.editorconfig
 		.exports
 		.functions
-		.gdbinit
 		.gvimrc
 		.hgignore
 		.hushlogin
@@ -56,11 +67,23 @@ link_dotfiles() {
 		.wgetrc
 		tmux.sh
 	)
+	local overwrite_all=false
+	local backup_all=false
+	local skip_all=false
+
+	for file in ${dotfiles[@]}; do
+		link_file "${BASEDIR}/${file}" "${HOMEDIR}/${file}"
+	done
+
+	success "The dotfiles were linked"
 }
+
 init () {
 	header "${reset}${bold}Installing ${blue}.dotfiles${reset}"
 	prompt_continue
-	configure_git
+	log_config
+	link_dotfiles
+	install_git
 	install_homebrew
 }
 

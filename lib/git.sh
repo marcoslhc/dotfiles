@@ -7,7 +7,6 @@ configure_git () {
 		git_credential="osxkeychain"
 	fi
 
-	header "Configuring Git"
 
 	prompt "What is your author name"
 	read_input git_authorname
@@ -34,10 +33,24 @@ copy_files_git() {
 		.gitconfig.results
 	)
 
-	for file in ${linked_dotfiles[@]}; do
+	for file in "${linked_dotfiles[@]}"; do
 		link_file "${BASEDIR}/${file}" "${BASEDIR}/test/${file}"
 	done
 
+	success:sm "Git dotfiles linked successfully"
+
+	for file in "${generated_dotfiles}"; do
+		mv "${TEMPLATEDIR}/${file}" "${HOMEDIR}/${file//.results/}"
+	done
+
+	success:sm "Git config file moved successfully"
 }
 
-
+install_git() {
+	header "Configuring ${reset}${bold}${yellow}Git${reset}"
+	info "Generating gitconfig"
+	configure_git
+	info "Linking and copying git dotfiles"
+	copy_files_git
+	success "Git configured successfully"
+}

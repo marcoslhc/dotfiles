@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-HOMEDIR="~/"
-TEMPLATEDIR="${BASEDIR}/templates"
-LOGSDIR="${BASEDIR}/logs"
+HOMEDIR="${HOME}"
+TEMPLATEDIR="templates"
+LOGSDIR="logs"
+BACKUPDIR="${HOMEDIR}/backup"
