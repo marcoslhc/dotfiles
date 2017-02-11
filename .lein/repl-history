@@ -1,0 +1,127 @@
+{:a 1}
+(exit)
+{:a 1}
+(exit)
+([] (+ 1 2))
+(+ 1 2)
+(defn recursive-printer
+([]
+(recursive-printer 0))
+([iteration]
+(println iteration)
+(if (> iteration 3)
+(println "goodbye!")
+(recursive-printer (inc iteration)))))
+(recursive-printer)
+([])
+([1])
+([1 2])
+(`[1 2])
+(get [1 2] 0)
+(:a (1 2))
+(+ 1 (:a (1 2)))
+([1 2])
+(get [1 2] 1)
+(let [x {:a 1}] x)
+x
+(x)
+(let [x {:a 1}] (:a x))
+(let [x [{:a 1 b:2}] [{c: 3]] (:c (x)))
+(let [x [{:a 1 b:2} {c: 3}]] (:c (x)))
+(let [x [{:a 1 b:2} {c: 3}]] (:c (x))
+x
+(let [x [{:a 1 b:2} {c: 3}]] (:c (x)))
+(let [x [{:a 1 b:2} {c: 3}]] (:c x))
+(let [x [{:a 1 b:2} {c: 3}]] (:c x)))
+(let [x [{:a 1 b:2} {c: 3}]] (:c x))
+(let [x [{:a 1 b:2} {c: 3}]])
+(let [x [{:a 1} {b:2} {c: 3}]])
+(let x [{:a 1} {b:2} {c: 3}])
+(let (x [1 2 3]))
+(let (x [1 2 3]) x)
+(let [x [1 2 3]] x)
+(let [x [:a 1 :b 2 :c 3]] x)
+(let [x [:a 1 :b 2 :c 3]] (:c x))
+(let [x [:a 1 :b 2 :c 3]])
+(let [x [:a 1 :b 2 :c 3]] x)
+(let [x [:a 1 :b 2 :c 3]])
+(let [x [:a 1 :b 2 :c 3]] (:c ([head & tail] x))
+)
+(let [x [:a 1 :b 2 :c 3]] (:c ([[head & tail] x]))
+)
+(let [x "Hello World"] println (str x "!"))
+(defn add100
+[number]
+(+ number 100))
+(add100 1)
+(add100 2)
+(add100 3)
+(add100 1000)
+(defn dec-maker
+[dec-by]
+#(- % dec-by))
+(def dec10 (dec-maker 10))
+(dec10 20)
+(dec10 19)
+(defn dec-maker
+[dec-by]
+(fn [num]
+(- num dec-by)))
+(def dec10 (dec-maker 10))
+(dec10 19)
+{}
+(defn mapset
+[collection]
+)
+(defn mapset
+[func collection]
+(loop [[head & tail] collection]
+(if (empty? tail)
+head
+(recur
+)
+(clear)
+(cls)
+(into [] (seq [1 2 3]))
+(seq [1 2 3])
+(into [] (seq {:a 1 :b 2 :c 3]))
+(into [] (seq {:a 1 :b 2 :c 3}))
+(map seq {:a 1 :b 2 :c 3})
+(concat (take 8 (repeat "na")) ["Batman!"])
+(exit)
+(require '[clj-http.client :as client])
+(exit)
+(require '[clj-http.client :as client])
+(exit)
+(+ 1 1)
+(distinct [:a :b :a :c :a :d])
+(dotimes [i 3]
+(println (rand-nth ["Fab" "Marv" "Incon"]
+i))
+)
+(dotimes [i 3]
+(println (rand-nth ["Fab" "Marv" "Incon"])
+i))
+(exit)
+((fn [arg] (println arg)) "Hello World)
+)
+")
+((fn [arg] (println arg)) "Hello World")
+(#(println %) "Hello World")
+(map #(println %) '(1 2 3))
+(map #(println %) [1 2 3])
+(defn bmi [height weight]
+    (println "Height: " height)
+    (println "Weight: " weight)
+    (/ weight (* height weight)))
+(bmi 172 90)
+(exit
+)
+(Exit)
+(exit)
+:q
+(exit)
+(map #(println %) [1 2 3])
+(source ->)
+(loop (println (eval (read x))))
+(exit)

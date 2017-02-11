@@ -97,3 +97,4 @@ cscope.po.out
 *.msi
 *.msm
 *.msp
+test/

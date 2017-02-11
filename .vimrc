@@ -35,6 +35,11 @@ Plugin 'lambdatoast/elm.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'mileszs/ack.vim'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-salve.git'
+Plugin 'tpope/vim-projectionist.git'
+Plugin 'tpope/vim-dispatch.git'
+Plugin 'tpope/vim-fireplace.git'
 call vundle#end()
 
 set rtp+=~/Documents/Projects/repos/powerline/powerline/bindings/vim
