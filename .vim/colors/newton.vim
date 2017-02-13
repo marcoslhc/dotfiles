@@ -76,35 +76,6 @@ fun! s:getColor(context, colorName)
   return (has_key(s:palette, a:colorName) ? get(s:palette, a:colorName)[l:idx] : "NONE")
 endfunction
 
-let s:white             = { "gui" : "#eeeeee", "cterm" : "255" }
-let s:very_light_grey   = { "gui" : "#c6c6c6", "cterm" : "251" }
-let s:light_grey        = { "gui" : "#949494", "cterm" : "246" }
-let s:grey              = { "gui" : "#4e4e4e", "cterm" : "238" }
-let s:dark_grey         = { "gui" : "#262626", "cterm" : "236" }
-let s:very_dark_grey    = { "gui" : "#1c1c1c", "cterm" : "234" }
-let s:turquoise         = { "gui" : "#008787", "cterm" :  "30" }
-let s:cyan              = { "gui" : "#5fdfdf", "cterm" :  "80" }
-let s:blue              = { "gui" : "#00afff", "cterm" :  "39" }
-let s:purple            = { "gui" : "#8700df", "cterm" :  "92" }
-let s:green             = { "gui" : "#87df00", "cterm" : "112" }
-let s:red               = { "gui" : "#ff0087", "cterm" : "198" }
-let s:orange            = { "gui" : "#df5f00", "cterm" : "166" }
-let s:light_orange      = { "gui" : "#FF8700", "cterm" : "208" }
-let s:yellow            = { "gui" : "#ffdf00", "cterm" : "220" }
-
-" [ ------------------------- Color re-definitions -------------------------- ]
-let s:textColor         = s:white
-let s:backgroundColor   = s:very_dark_grey
-
-let s:diffAddFg         = { "gui" : "#005f00", "cterm" :  "22" }
-let s:diffAddBg         = { "gui" : "#afff6f", "cterm" : "155" }
-let s:diffDeleteFg      = { "gui" : "#870044", "cterm" :  "88" }
-let s:diffDeleteBg      = { "gui" : "#ff87af", "cterm" : "211" }
-let s:diffChangeFg      = { "gui" : "#1c1c1c", "cterm" : "234" }
-let s:diffChangeBg      = { "gui" : "#ffff87", "cterm" : "228" }
-let s:diffTextFg        = { "gui" : "#1c1c1c", "cterm" : "234" }
-let s:diffTextBg        = { "gui" : "#ffdf00", "cterm" : "220" }
-
 highlight clear
 
 if exists("syntax_on")
@@ -150,25 +121,25 @@ endfun
 
 
 " Uncomment and complete the commands you want to change from the default.
-call s:h("Normal", { "fg": "textFg", "bg": "textBg", "attr": "bold"})
+call s:h("Normal",         { "fg": "textFg", "bg": "textBg", "attr": "bold"})
 "hi Cursor
 "hi CursorIM
-call s:h("CursorLineNR", {"fg": "yellow", "bg": "dark_grey", "attr": "underline", "guisp": "fg", "ctermsp" : "fg" })
-call s:h("CursorLine", { "bg": "grey" })
-call s:h("DiffAdd",     {"fg": "diffAddFg",    "bg": "diffAddBg" })
-call s:h("DiffChange",  {"fg": "diffChangeFg", "bg": "diffChangeBg" })
-call s:h("DiffDelete",  {"fg": "diffDeleteFg", "bg": "diffDeleteBg" })
-call s:h("DiffText",    {"fg": "diffTextFg",   "bg": "diffTextBg," })
-call s:h("diffAdded",     {"fg": "diffAddFg",    "bg": "diffAddBg" })
-call s:h("diffRemoved",  {"fg": "diffDeleteFg", "bg": "diffDeleteBg" })
-call s:h("ErrorMsg", {"fg": "red" })
-call s:h("VertSplit", {"fg": "grey", "bg": "very_dark_grey" })
+call s:h("CursorLineNR",   { "fg": "yellow", "bg": "dark_grey", "attr": "underline", "guisp": "fg", "ctermsp" : "fg" })
+call s:h("CursorLine",     { "bg": "grey" })
+call s:h("DiffAdd",        { "fg": "diffAddFg",    "bg": "diffAddBg" })
+call s:h("DiffChange",     { "fg": "diffChangeFg", "bg": "diffChangeBg" })
+call s:h("DiffDelete",     { "fg": "diffDeleteFg", "bg": "diffDeleteBg" })
+call s:h("DiffText",       { "fg": "diffTextFg",   "bg": "diffTextBg," })
+call s:h("diffAdded",      { "fg": "diffAddFg",    "bg": "diffAddBg" })
+call s:h("diffRemoved",    { "fg": "diffDeleteFg", "bg": "diffDeleteBg" })
+call s:h("ErrorMsg",       { "fg": "red" })
+call s:h("VertSplit",      { "fg": "grey", "bg": "very_dark_grey" })
 "hi Folded
 "hi FoldColumn
 "hi IncSearch
-call s:h("LineNr", {"fg": "light_grey", "bg": "very_dark_grey" })
-call s:h("ModeMsg", {"fg": "green" })
-call s:h("MoreMsg", {"fg": "green" })
+call s:h("LineNr",         { "fg": "light_grey", "bg": "very_dark_grey" })
+call s:h("ModeMsg",        { "fg": "green" })
+call s:h("MoreMsg",        { "fg": "green" })
 "hi NonText
 "hi Question
 "hi Search
@@ -184,7 +155,7 @@ call s:h("MoreMsg", {"fg": "green" })
 "hi Menu
 "hi Scrollbar
 "hi Tooltip
-call s:h("Directory", { "fg": "turquoise", "attr": "bold" })
+call s:h("Directory",      { "fg": "turquoise", "attr": "bold" })
 
 " syntax highlighting groups
 call s:h("Comment",        { "fg": "light_grey",  "bg": "very_dark_grey", "attr": "italic" })
@@ -220,94 +191,94 @@ call s:h("SpecialComment", { "fg": "white", "attr": "bold" })
 call s:h("Debug",          { "fg": "orange", "bg": "yellow" })
 call s:h("Underlined",     { "fg": "blue", "attr": "underline", "sp": "fg"})
 "hi Ignore
-call s:h("Error", { "fg": "purple", "bg": "red" })
+call s:h("Error",          { "fg": "purple", "bg": "red" })
 "hi Todo
 
 " [----------------- Syntax ------------------------]: {{{
-call s:h("cssAttrComma", { "fg": "purple" })
+call s:h("cssAttrComma",         { "fg": "purple" })
 call s:h("cssAttributeSelector", { "fg": "green" })
-call s:h("cssBraces", { "fg": "white" })
-call s:h("cssClassName", { "fg": "yellow" })
-call s:h("cssClassNameDot", { "fg": "yellow" })
-call s:h("cssDefinition", { "fg": "purple" })
-call s:h("cssFontAttr", { "fg": "yellow" })
-call s:h("cssFontDescriptor", { "fg": "purple" })
-call s:h("cssFunctionName", { "fg": "blue" })
-call s:h("cssIdentifier", { "fg": "blue" })
-call s:h("cssImportant", { "fg": "purple" })
-call s:h("cssInclude", { "fg": "white" })
-call s:h("cssIncludeKeyword", { "fg": "purple" })
-call s:h("cssMediaType", { "fg": "yellow" })
-call s:h("cssProp", { "fg": "white" })
-call s:h("cssPseudoClassId", { "fg": "yellow" })
-call s:h("cssSelectorOp", { "fg": "purple" })
-call s:h("cssSelectorOp2", { "fg": "purple" })
-call s:h("cssTagName", { "fg": "red" })
+call s:h("cssBraces",            { "fg": "white" })
+call s:h("cssClassName",         { "fg": "yellow" })
+call s:h("cssClassNameDot",      { "fg": "yellow" })
+call s:h("cssDefinition",        { "fg": "purple" })
+call s:h("cssFontAttr",          { "fg": "yellow" })
+call s:h("cssFontDescriptor",    { "fg": "purple" })
+call s:h("cssFunctionName",      { "fg": "blue" })
+call s:h("cssIdentifier",        { "fg": "blue" })
+call s:h("cssImportant",         { "fg": "purple" })
+call s:h("cssInclude",           { "fg": "white" })
+call s:h("cssIncludeKeyword",    { "fg": "purple" })
+call s:h("cssMediaType",         { "fg": "yellow" })
+call s:h("cssProp",              { "fg": "white" })
+call s:h("cssPseudoClassId",     { "fg": "yellow" })
+call s:h("cssSelectorOp",        { "fg": "purple" })
+call s:h("cssSelectorOp2",       { "fg": "purple" })
+call s:h("cssTagName",           { "fg": "red" })
 
 " HTML
-call s:h("htmlTitle", { "fg": "white" })
-call s:h("htmlArg", { "fg": "yellow" })
-call s:h("htmlEndTag", { "fg": "white" })
-call s:h("htmlH1", { "fg": "white" })
-call s:h("htmlLink", { "fg": "purple" })
-call s:h("htmlSpecialChar", { "fg": "yellow" })
+call s:h("htmlTitle",          { "fg": "white" })
+call s:h("htmlArg",            { "fg": "yellow" })
+call s:h("htmlEndTag",         { "fg": "white" })
+call s:h("htmlH1",             { "fg": "white" })
+call s:h("htmlLink",           { "fg": "purple" })
+call s:h("htmlSpecialChar",    { "fg": "yellow" })
 call s:h("htmlSpecialTagName", { "fg": "red" })
-call s:h("htmlTag", { "fg": "white" })
-call s:h("htmlTagName", { "fg": "red" })
+call s:h("htmlTag",            { "fg": "white" })
+call s:h("htmlTagName",        { "fg": "red" })
 
 " JavaScript
-call s:h("javaScriptBraces", { "fg": "white" })
-call s:h("javaScriptFunction", { "fg": "purple" })
+call s:h("javaScriptBraces",     { "fg": "white" })
+call s:h("javaScriptFunction",   { "fg": "purple" })
 call s:h("javaScriptIdentifier", { "fg": "blue" })
-call s:h("javaScriptNull", { "fg": "yellow" })
-call s:h("javaScriptNumber", { "fg": "yellow" })
-call s:h("javaScriptRequire", { "fg": "cyan" })
-call s:h("javaScriptReserved", { "fg": "purple" })
+call s:h("javaScriptNull",       { "fg": "yellow" })
+call s:h("javaScriptNumber",     { "fg": "yellow" })
+call s:h("javaScriptRequire",    { "fg": "cyan" })
+call s:h("javaScriptReserved",   { "fg": "purple" })
 " https://github.com/pangloss/vim-javascript
-call s:h("jsArrowFunction", { "fg": "purple" })
-call s:h("jsClassKeyword", { "fg": "yellow" })
-call s:h("jsClassMethodType", { "fg": "blue" })
-call s:h("jsDocParam", { "fg": "blue" })
-call s:h("jsDocTags", { "fg": "purple" })
-call s:h("jsExport", { "fg": "purple" })
-call s:h("jsExportDefault", { "fg": "purple" })
-call s:h("jsExtendsKeyword", { "fg": "purple" })
-call s:h("jsFrom", { "fg": "purple" })
-call s:h("jsFuncCall", { "fg": "blue" })
-call s:h("jsFunction", { "fg": "purple" })
-call s:h("jsGlobalObjects", { "fg": "yellow" })
-call s:h("jsImport", { "fg": "purple" })
-call s:h("jsModuleAs", { "fg": "purple" })
-call s:h("jsModuleWords", { "fg": "purple" })
-call s:h("jsModules", { "fg": "purple" })
-call s:h("jsNull", { "fg": "yellow" })
-call s:h("jsOperator", { "fg": "purple" })
-call s:h("jsStorageClass", { "fg": "purple" })
-call s:h("jsSuper", { "fg": "red" })
-call s:h("jsTemplateBraces", { "fg": "red" })
-call s:h("jsTemplateVar", { "fg": "green" })
-call s:h("jsThis", { "fg": "red" })
-call s:h("jsUndefined", { "fg": "yellow" })
+call s:h("jsArrowFunction",      { "fg": "purple" })
+call s:h("jsClassKeyword",       { "fg": "yellow" })
+call s:h("jsClassMethodType",    { "fg": "blue" })
+call s:h("jsDocParam",           { "fg": "blue" })
+call s:h("jsDocTags",            { "fg": "purple" })
+call s:h("jsExport",             { "fg": "purple" })
+call s:h("jsExportDefault",      { "fg": "purple" })
+call s:h("jsExtendsKeyword",     { "fg": "purple" })
+call s:h("jsFrom",               { "fg": "purple" })
+call s:h("jsFuncCall",           { "fg": "blue" })
+call s:h("jsFunction",           { "fg": "purple" })
+call s:h("jsGlobalObjects",      { "fg": "yellow" })
+call s:h("jsImport",             { "fg": "purple" })
+call s:h("jsModuleAs",           { "fg": "purple" })
+call s:h("jsModuleWords",        { "fg": "purple" })
+call s:h("jsModules",            { "fg": "purple" })
+call s:h("jsNull",               { "fg": "yellow" })
+call s:h("jsOperator",           { "fg": "purple" })
+call s:h("jsStorageClass",       { "fg": "purple" })
+call s:h("jsSuper",              { "fg": "red" })
+call s:h("jsTemplateBraces",     { "fg": "red" })
+call s:h("jsTemplateVar",        { "fg": "green" })
+call s:h("jsThis",               { "fg": "red" })
+call s:h("jsUndefined",          { "fg": "yellow" })
 " https://github.com/othree/yajs.vim
-call s:h("javascriptArrowFunc", { "fg": "purple" })
+call s:h("javascriptArrowFunc",    { "fg": "purple" })
 call s:h("javascriptClassExtends", { "fg": "purple" })
 call s:h("javascriptClassKeyword", { "fg": "purple" })
-call s:h("javascriptDocNotation", { "fg": "purple" })
+call s:h("javascriptDocNotation",  { "fg": "purple" })
 call s:h("javascriptDocParamName", { "fg": "blue" })
-call s:h("javascriptDocTags", { "fg": "purple" })
-call s:h("javascriptEndColons", { "fg": "white" })
-call s:h("javascriptExport", { "fg": "purple" })
-call s:h("javascriptFuncArg", { "fg": "white" })
-call s:h("javascriptFuncKeyword", { "fg": "purple" })
-call s:h("javascriptIdentifier", { "fg": "red" })
-call s:h("javascriptImport", { "fg": "purple" })
-call s:h("javascriptMethodName", { "fg": "white" })
-call s:h("javascriptObjectLabel", { "fg": "white" })
-call s:h("javascriptOpSymbol", { "fg": "cyan" })
-call s:h("javascriptOpSymbols", { "fg": "cyan" })
+call s:h("javascriptDocTags",      { "fg": "purple" })
+call s:h("javascriptEndColons",    { "fg": "white" })
+call s:h("javascriptExport",       { "fg": "purple" })
+call s:h("javascriptFuncArg",      { "fg": "white" })
+call s:h("javascriptFuncKeyword",  { "fg": "purple" })
+call s:h("javascriptIdentifier",   { "fg": "red" })
+call s:h("javascriptImport",       { "fg": "purple" })
+call s:h("javascriptMethodName",   { "fg": "white" })
+call s:h("javascriptObjectLabel",  { "fg": "white" })
+call s:h("javascriptOpSymbol",     { "fg": "cyan" })
+call s:h("javascriptOpSymbols",    { "fg": "cyan" })
 call s:h("javascriptPropertyName", { "fg": "green" })
-call s:h("javascriptTemplateSB", { "fg": "red" })
-call s:h("javascriptVariable", { "fg": "purple" })
+call s:h("javascriptTemplateSB",   { "fg": "red" })
+call s:h("javascriptVariable",     { "fg": "purple" })
 
 " JSON
 call s:h("jsonCommentError", { "fg": "white" })
