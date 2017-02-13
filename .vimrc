@@ -13,33 +13,55 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'mattn/emmet-vim', {'name': 'zenCoding'}
-Plugin 'rosenfeld/conque-term'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'tpope/vim-fugitive'
+" Plugin management
+Plugin 'gmarik/Vundle.vim'                        " Plugin Manager
+
+" Terminal access
+Plugin 'rosenfeld/conque-term'                    " :ConqueTerm
+
+" Git
+Plugin 'tpope/vim-fugitive'                       " :Git
 Plugin 'tpope/vim-git'
+Plugin 'jreybert/vimagit'                         " :Magit
+
+" Status Line
 Plugin 'vim-airline/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
+
+" Snippets
+Plugin 'mattn/emmet-vim', {'name': 'zenCoding'}   " <Ctrl-y> ,
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+
+" Syntaxes
 Plugin 'isRuslan/vim-es6'
-Plugin 'jreybert/vimagit'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'lambdatoast/elm.vim'
+
+" Code Editing
+Plugin 'terryma/vim-multiple-cursors'             " <Ctrl-n>
+Plugin 'editorconfig/editorconfig-vim'
+
+" Themes
 Plugin 'fneu/breezy'
+Plugin 'NLKNguyen/papercolor-theme'
+
+" Tree File Explorer
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'lambdatoast/elm.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'NLKNguyen/papercolor-theme'
+
+" File Search
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
+
+" Clojure
 Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-salve.git'
-Plugin 'tpope/vim-projectionist.git'
-Plugin 'tpope/vim-dispatch.git'
-Plugin 'tpope/vim-fireplace.git'
+Plugin 'tpope/vim-salve'                          " :help salve
+Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-fireplace'                      " :fireplace
 call vundle#end()
 
 set rtp+=~/Documents/Projects/repos/powerline/powerline/bindings/vim
@@ -60,7 +82,7 @@ filetype plugin indent on " required!
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 
 set background=dark
-colorscheme PaperColor
+colorscheme newton
 
 if has("clipboard") && $TMUX == ''
   set clipboard=unnamed " copy to the system clipboard
