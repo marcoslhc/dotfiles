@@ -194,6 +194,11 @@ call s:h("Underlined",     { "fg": "blue", "attr": "underline", "sp": "fg"})
 call s:h("Error",          { "fg": "purple", "bg": "red" })
 "hi Todo
 
+call s:h("Pmenu",          { "fg": "very_dark_grey", "bg": "white" })
+call s:h("PmenuSel",      { "fg": "white", "bg": "blue", "attr": "bold" })
+call s:h("PmenuSbar",      { "fg": "grey", "bg": "grey" })
+call s:h("PmenuThum",      { "fg": "blue", "bg": "blue" })
+
 " [----------------- Syntax ------------------------]: {{{
 call s:h("cssAttrComma",         { "fg": "purple" })
 call s:h("cssAttributeSelector", { "fg": "green" })
