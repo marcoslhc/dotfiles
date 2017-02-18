@@ -36,7 +36,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " Syntaxes
-Plugin 'isRuslan/vim-es6'
+Plugin 'pangloss/vim-javascript'
 Plugin 'lambdatoast/elm.vim'
 
 " Code Editing
@@ -219,6 +219,8 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 if has("autocmd")
   " Enable file type detection
   filetype on
+  "Treat js files as js
+  autocmd BufNewFile,BufRead *.js setfiletype javascript syntax=javascript
   " Treat .json files as .js
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
   " Treat .md files as Markdown
@@ -243,3 +245,8 @@ set omnifunc=syntaxcomplete#Complete
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" F10 - Shows the Hightlight Group under the cursor
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '>
+      \ trans<' . synIDattr(synID(line("."),col("."),0),"name") . ">
+      \ lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>

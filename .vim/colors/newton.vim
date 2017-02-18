@@ -44,9 +44,10 @@ let s:palette = {
   \  "blue":            ["#00afff",  "39"],
   \  "purple":          ["#8700df",  "92"],
   \  "green":           ["#87df00", "112"],
-  \  "red":             ["#af005f", "125"],
+  \  "magenta":         ["#af005f", "125"],
+  \  "red":             ["#ff0087", "198"],
   \  "orange":          ["#df5f00", "166"],
-  \  "light_orange":    ["#FF8700", "208"],
+  \  "light_orange":    ["#ff8700", "208"],
   \  "yellow":          ["#ffdf00", "220"],
   \  "textFg":          ["#eeeeee", "255"],
   \  "textBg":          ["#1c1c1c", "234"],
@@ -134,7 +135,7 @@ call s:h("diffAdded",      { "fg": "diffAddFg",    "bg": "diffAddBg" })
 call s:h("diffRemoved",    { "fg": "diffDeleteFg", "bg": "diffDeleteBg" })
 call s:h("ErrorMsg",       { "fg": "red" })
 call s:h("VertSplit",      { "fg": "grey", "bg": "very_dark_grey" })
-"hi Folded
+call s:h("Folded",     {"fg": "diffChangeFg", "bg": "diffChangeBg", "attr": "bold"})
 "hi FoldColumn
 "hi IncSearch
 call s:h("LineNr",         { "fg": "light_grey", "bg": "very_dark_grey" })
@@ -232,38 +233,45 @@ call s:h("htmlTag",            { "fg": "white" })
 call s:h("htmlTagName",        { "fg": "red" })
 
 " JavaScript
+call s:h("javaScript",           { "fg": "light_orange" })
 call s:h("javaScriptBraces",     { "fg": "white" })
-call s:h("javaScriptFunction",   { "fg": "purple" })
+call s:h("javaScriptFunction",   { "fg": "red" })
 call s:h("javaScriptIdentifier", { "fg": "blue" })
 call s:h("javaScriptNull",       { "fg": "yellow" })
 call s:h("javaScriptNumber",     { "fg": "yellow" })
 call s:h("javaScriptRequire",    { "fg": "cyan" })
-call s:h("javaScriptReserved",   { "fg": "purple" })
+call s:h("javaScriptReserved",   { "fg": "red", "attr": "bold" })
 " https://github.com/pangloss/vim-javascript
-call s:h("jsArrowFunction",      { "fg": "purple" })
-call s:h("jsClassKeyword",       { "fg": "yellow" })
+call s:h("jsArrowFunction",      { "fg": "red", "attr": "bold" })
+call s:h("jsArrowFunctionArgs",  { "fg": "light_orange" })
+call s:h("jsClassKeyword",       { "fg": "yellow", "attr": "bold" })
 call s:h("jsClassMethodType",    { "fg": "blue" })
 call s:h("jsDocParam",           { "fg": "blue" })
 call s:h("jsDocTags",            { "fg": "purple" })
-call s:h("jsExport",             { "fg": "purple" })
-call s:h("jsExportDefault",      { "fg": "purple" })
-call s:h("jsExtendsKeyword",     { "fg": "purple" })
-call s:h("jsFrom",               { "fg": "purple" })
+call s:h("jsExport",             { "fg": "red", "attr": "bold" })
+call s:h("jsExportDefault",      { "fg": "red", "attr": "bold" })
+call s:h("jsExtendsKeyword",     { "fg": "red", "attr": "bold" })
+call s:h("jsFrom",               { "fg": "red", "attr": "bold" })
+call s:h("jsFuncArgs",           { "fg": "light_orange" })
 call s:h("jsFuncCall",           { "fg": "blue" })
-call s:h("jsFunction",           { "fg": "purple" })
+call s:h("jsFunction",           { "fg": "red", "attr": "bold" })
 call s:h("jsGlobalObjects",      { "fg": "yellow" })
-call s:h("jsImport",             { "fg": "purple" })
-call s:h("jsModuleAs",           { "fg": "purple" })
-call s:h("jsModuleWords",        { "fg": "purple" })
-call s:h("jsModules",            { "fg": "purple" })
+call s:h("jsImport",             { "fg": "red", "attr": "bold" })
+call s:h("jsModuleAs",           { "fg": "red", "attr": "bold" })
+call s:h("jsModuleKeyword",        { "fg": "light_orange" })
+call s:h("jsModuleWords",        { "fg": "light_orange" })
+call s:h("jsModules",            { "fg": "light_orange" })
 call s:h("jsNull",               { "fg": "yellow" })
-call s:h("jsOperator",           { "fg": "purple" })
-call s:h("jsStorageClass",       { "fg": "purple" })
+call s:h("jsObject",             { "fg": "magenta" })
+call s:h("jsObjectProp",         { "fg": "magenta" })
+call s:h("jsOperator",           { "fg": "red" })
+call s:h("jsStorageClass",       { "fg": "red" })
 call s:h("jsSuper",              { "fg": "red" })
 call s:h("jsTemplateBraces",     { "fg": "red" })
 call s:h("jsTemplateVar",        { "fg": "green" })
 call s:h("jsThis",               { "fg": "red" })
 call s:h("jsUndefined",          { "fg": "yellow" })
+call s:h("jsVariableDef",        { "fg": "light_orange" })
 " https://github.com/othree/yajs.vim
 call s:h("javascriptArrowFunc",    { "fg": "purple" })
 call s:h("javascriptClassExtends", { "fg": "purple" })
@@ -273,17 +281,17 @@ call s:h("javascriptDocParamName", { "fg": "blue" })
 call s:h("javascriptDocTags",      { "fg": "purple" })
 call s:h("javascriptEndColons",    { "fg": "white" })
 call s:h("javascriptExport",       { "fg": "purple" })
-call s:h("javascriptFuncArg",      { "fg": "white" })
-call s:h("javascriptFuncKeyword",  { "fg": "purple" })
+call s:h("javascriptFuncArg",      { "fg": "light_orange" })
+call s:h("javascriptFuncKeyword",  { "fg": "red", "attr": "bold" })
 call s:h("javascriptIdentifier",   { "fg": "red" })
-call s:h("javascriptImport",       { "fg": "purple" })
-call s:h("javascriptMethodName",   { "fg": "white" })
-call s:h("javascriptObjectLabel",  { "fg": "white" })
+call s:h("javascriptImport",       { "fg": "purple", "attr": "bold" })
+call s:h("javascriptMethodName",   { "fg": "blue" })
+call s:h("javascriptObjectLabel",  { "fg": "blue" })
 call s:h("javascriptOpSymbol",     { "fg": "cyan" })
 call s:h("javascriptOpSymbols",    { "fg": "cyan" })
 call s:h("javascriptPropertyName", { "fg": "green" })
 call s:h("javascriptTemplateSB",   { "fg": "red" })
-call s:h("javascriptVariable",     { "fg": "purple" })
+call s:h("javascriptVariable",     { "fg": "light_orange" })
 
 " JSON
 call s:h("jsonCommentError", { "fg": "white" })
