@@ -42,6 +42,8 @@ Plugin 'lambdatoast/elm.vim'
 " Code Editing
 Plugin 'terryma/vim-multiple-cursors'             " <Ctrl-n>
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'maksimr/vim-jsbeautify'
 
 " Themes
 Plugin 'fneu/breezy'
@@ -219,8 +221,6 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 if has("autocmd")
   " Enable file type detection
   filetype on
-  "Treat js files as js
-  autocmd BufNewFile,BufRead *.js setfiletype javascript syntax=javascript
   " Treat .json files as .js
   autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
   " Treat .md files as Markdown
