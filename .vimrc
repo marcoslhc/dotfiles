@@ -64,6 +64,9 @@ Plugin 'tpope/vim-salve'                          " :help salve
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'                      " :fireplace
+
+" Terminal Integration
+Plugin 'wincent/terminus'
 call vundle#end()
 
 set rtp+=~/Documents/Projects/repos/powerline/powerline/bindings/vim
@@ -245,6 +248,10 @@ set omnifunc=syntaxcomplete#Complete
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" let g:syntastic_javascript_checkers = ['eslint']
+
+" let g:syntastic_debug = 3
 
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 "for json
