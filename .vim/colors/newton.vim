@@ -397,6 +397,14 @@ call s:h("xmlAttrib", { "fg": "yellow" })
 call s:h("xmlEndTag", { "fg": "red" })
 call s:h("xmlTag", { "fg": "red" })
 call s:h("xmlTagName", { "fg": "red" })
+
+
+" Clojure
+call s:h("ClojureDefine", {"fg": "red"})
+call s:h("ClojureBoolean", {"fg": "red"})
+call s:h("ClojureMacro", {"fg": "blue"})
+call s:h("ClojureSymbol", {"fg": "white"})
+call s:h("ClojureSpecial", {"fg": "blue"})
 " }}}
 
 " [--------------- tpope/vim-fugitive -------------]: {{{
