@@ -39,9 +39,6 @@
 
 	# Interactive rebase with the given number of latest commits
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
-	ci = commit -v
-	pushit = push -u origin HEAD
-	addit = add --interactive
 
 	ci = commit -v
 
@@ -51,6 +48,11 @@
 
 	branchit = "!r() { git fetch $1 && git checkout $2; }; r"
 
+  fixup = "!f() { git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"; }; f"
+
+  sqashit = "!s(){ git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\" }; s"
+
+  rebaseit = "rebase --interactive --autosquash"
 	# Remove the old tag with this name and tag the latest commit with it.
 	retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
 
