@@ -58,6 +58,6 @@ export GNUTERM=X11
 export OCTAVE_TERMINAL=X11
 export PATH="$PATH:`yarn global bin`"
 
-export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH=$(brew --prefix)/lib/python3.6/site-packages
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv

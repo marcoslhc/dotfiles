@@ -30,7 +30,7 @@ done;
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";
-elif [ -f "/usr/local/etc/bash_completion.d" ] then
+elif [ -f "/usr/local/etc/bash_completion.d" ]; then
 	source "/usr/local/etc/bash_completion.d";
 fi;
 
@@ -55,5 +55,3 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 source "$HOME/.profile";
 
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
-
-
