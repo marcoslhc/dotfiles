@@ -36,7 +36,7 @@ export GREP_OPTIONS="--color=auto";
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$(brew --prefix)/heroku/bin:$PATH"
 
 ### Used by Mopidy
 # http://docs.mopidy.com/en/latest/installation/#os-x-install-from-homebrew-and-pip
@@ -48,16 +48,22 @@ export GH_API_TOKEN=
 export GH_API_USER=
 export GH_API_USER_TOKEN=
 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
 
 complete -W "NSGlobalDomain" defaults;
-export PYENV_ROOT=/usr/local/var/pyenv
 export GNUTERM=X11
 export OCTAVE_TERMINAL=X11
 export PATH="$PATH:`yarn global bin`"
 
+### Python
+export PYENV_ROOT=$(brew --prefix)/var/pyenv
 export PYTHONPATH=$(brew --prefix)/lib/python3.6/site-packages
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source $(brew --prefix)/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=$(brew --prefix)/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=$(brew --prefix)/bin/virtualenv
+
+### JAVA
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+export MAVEN_HOME=$(brew --prefix)/Cellar/maven/3.3.9/
+export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
