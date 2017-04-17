@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# alias python='python3'
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."

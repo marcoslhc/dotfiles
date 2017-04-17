@@ -44,7 +44,7 @@ Plugin 'terryma/vim-multiple-cursors'             " <Ctrl-n>
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'maksimr/vim-jsbeautify'
-
+Plugin 'leafgarland/typescript-vim'
 " Themes
 Plugin 'fneu/breezy'
 Plugin 'NLKNguyen/papercolor-theme'
@@ -87,7 +87,7 @@ filetype plugin indent on " required!
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 
 set background=dark
-colorscheme newton
+colorscheme PaperColor
 
 if has("clipboard") && $TMUX == ''
   set clipboard=unnamed " copy to the system clipboard
