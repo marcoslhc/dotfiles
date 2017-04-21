@@ -19,7 +19,7 @@ alias p="cd ~/Projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
-
+alias tailerrlog="tail -f < $(ls -als | sort -k 8,10 | grep error.log | tail -n1 | awk '{print $NF}')"
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
