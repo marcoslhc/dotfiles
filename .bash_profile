@@ -30,10 +30,12 @@ done;
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";
-elif [ -f "/usr/local/etc/bash_completion.d" ]; then
-	source "/usr/local/etc/bash_completion.d";
+elif [ -f /etc/bash_completion ]; then
+	source /etc/bash_completion;
 fi;
-
+if [ -f "/usr/local/etc/bash_completion.d" ]; then
+	source "/usr/local/etc/bash_completion.d";
+fi
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	complete -o default -o nospace -F _git g;
@@ -52,6 +54,19 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # If possible, add tab completion for many more commands
 [ -f "/etc/bash_completion" ] && source "/etc/bash_completion";
 
-# source "$HOME/.profile";
+source "$HOME/.profile";
+
+[[ -r "$(brew --prefix nvm)/nvm.sh" ]] && source "$(brew --prefix nvm)/nvm.sh";
+nvm use default;
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+export GOPATH="$HOME/Projects/go"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/marcoslh/.sdkman"
+[[ -s "/Users/marcoslh/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/marcoslh/.sdkman/bin/sdkman-init.sh"

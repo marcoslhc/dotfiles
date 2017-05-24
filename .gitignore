@@ -49,6 +49,11 @@ Session.vim
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 .Python
+[Bb]in
+# [Ii]nclude
+# [Ll]ib
+# [Ll]ocal
+# [Ss]cripts
 pyvenv.cfg
 pip-selfcheck.json
 
@@ -60,6 +65,7 @@ TAGS
 !TAGS/
 tags
 .tags
+.tags*
 !tags/
 gtags.files
 GTAGS
@@ -97,4 +103,3 @@ cscope.po.out
 *.msi
 *.msm
 *.msp
-test/

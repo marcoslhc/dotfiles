@@ -38,13 +38,17 @@ Plugin 'honza/vim-snippets'
 " Syntaxes
 Plugin 'pangloss/vim-javascript'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'leafgarland/typescript-vim'
 
 " Code Editing
 Plugin 'terryma/vim-multiple-cursors'             " <Ctrl-n>
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'maksimr/vim-jsbeautify'
-Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'Quramy/vim-js-pretty-template'
+
 " Themes
 Plugin 'fneu/breezy'
 Plugin 'NLKNguyen/papercolor-theme'
@@ -64,6 +68,9 @@ Plugin 'tpope/vim-salve'                          " :help salve
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'                      " :fireplace
+
+" Git
+Plugin 'jisaacks/gitgutter'
 
 " Terminal Integration
 Plugin 'wincent/terminus'
@@ -216,7 +223,9 @@ function! StripWhitespace()
   call setpos('.', save_cursor)
   call setreg('/', old_query)
 endfunction
+
 noremap <leader>ss :call StripWhitespace()<CR>
+
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 

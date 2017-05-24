@@ -73,7 +73,7 @@
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 	# List contributors with number of commits
-	contributors = shortlog --summary --numbered
+    contributors = shortlog --summary --numbered
 
     u = "!f() { git checkout \"$2\" && git pull --rebase \"$1\" \"$2\" && git push origin \"$2\";}; f"
 

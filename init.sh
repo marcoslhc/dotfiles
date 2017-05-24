@@ -16,6 +16,7 @@ load_libs() {
 		utils
 		git
 		homebrew
+		jvm
 	)
 
 	# while accessign arrays we need to use curly braces to prevent
@@ -85,6 +86,7 @@ init () {
 	link_dotfiles
 	install_git
 	install_homebrew
+	install_sdkman
 }
 
 # Warns the user about the task and asks for permission
