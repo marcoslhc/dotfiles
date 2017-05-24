@@ -51,6 +51,11 @@
 
 	branchit = "!r() { git fetch $1 && git checkout $2; }; r"
 
+  fixup = "!f() { git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"; }; f"
+
+  sqashit = "!s(){ git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\" }; s"
+
+  rebaseit = "rebase --interactive --autosquash"
 	# Remove the old tag with this name and tag the latest commit with it.
 	retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
 
@@ -71,7 +76,7 @@
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 	# List contributors with number of commits
-	contributors = shortlog --summary --numbered
+    contributors = shortlog --summary --numbered
 
     u = "!f() { git checkout \"$2\" && git pull --rebase \"$1\" \"$2\" && git push origin \"$2\";}; f"
 
