@@ -34,7 +34,7 @@ copy_files_git() {
 	)
 
 	for file in "${linked_dotfiles[@]}"; do
-		link_file "${BASEDIR}/${file}" "${BASEDIR}/test/${file}"
+		link_file "${BASEDIR}/${file}" "${BASEDIR}/${file}"
 	done
 
 	success:sm "Git dotfiles linked successfully"
