@@ -103,3 +103,5 @@ cscope.po.out
 *.msi
 *.msm
 *.msp
+
+logs/
