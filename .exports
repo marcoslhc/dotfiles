@@ -26,21 +26,15 @@ export GREP_OPTIONS="--color=auto";
 # Link Homebrew casks in `/Applications` rather than `~/Applications`
 export HOMEBREW_CASK_OPTS="--appdir=/Applications";
 
-### Added by the Heroku Toolbelt
-export PATH="$(brew --prefix)/heroku/bin:$PATH"
-
 ### Used by Mopidy
 # http://docs.mopidy.com/en/latest/installation/#os-x-install-from-homebrew-and-pip
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/local/bin:$HOME/bin:$PATH";
 
 export SECRET_TOKEN=
 export GH_API_TOKEN=
 export GH_API_USER=
 export GH_API_USER_TOKEN=
 
-
 complete -W "NSGlobalDomain" defaults;
-export PATH="/usr/local/sbin:$PATH"
 export GNUTERM=X11
 export OCTAVE_TERMINAL=X11

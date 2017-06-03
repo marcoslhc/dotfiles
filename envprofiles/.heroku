@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+### Added by the Heroku Toolbelt
+export PATH="$(brew --prefix)/heroku/bin:$PATH"
