@@ -6,12 +6,8 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done;
 unset file;
 
-for file in $(find ./envprofiles -type f); do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done
-unset file;
 
-	# Case-insensitive globbing (used in pathname expansion)
+# Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
 # Append to the Bash history file, rather than overwriting it
@@ -28,14 +24,11 @@ for option in autocd globstar; do
 done;
 
 # Add tab completion for many Bash commands
-if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-	source "$(brew --prefix)/share/bash-completion/bash_completion";
-elif [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion;
-fi;
-if [ -f "/usr/local/etc/bash_completion.d" ]; then
-	source "/usr/local/etc/bash_completion.d";
+if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    echo "[ bash completion] loading..."
+	source "$(brew --prefix)/etc/bash_completion";
 fi
+
 # Enable tab completion for `g` by marking it as an alias for `git`
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	complete -o default -o nospace -F _git g;
@@ -56,16 +49,12 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 source "$HOME/.profile";
 
-[[ -r "$(brew --prefix nvm)/nvm.sh" ]] && source "$(brew --prefix nvm)/nvm.sh";
-nvm use default;
-
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-export GOPATH="$HOME/Projects/go"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+for file in $(find ./envprofiles -type f); do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done
+unset file;
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/marcoslh/.sdkman"

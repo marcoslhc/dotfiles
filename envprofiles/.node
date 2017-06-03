@@ -13,3 +13,5 @@ export NVM_DIR=~/.nvm
 [[ -r "$(brew --prefix nvm)/bash_completion" ]] && . "$(brew --prefix nvm)/bash_completion";
 
 nvm use stable;
+
+export PATH="$PATH:`yarn global bin`"

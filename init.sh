@@ -66,7 +66,9 @@ link_dotfiles() {
 		.tmux.conf
 		.vimrc
 		.wgetrc
+		envprofiles
 		tmux.sh
+		.tmuxlinerc
 	)
 	local overwrite_all=false
 	local backup_all=false

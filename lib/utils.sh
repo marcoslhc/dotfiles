@@ -2,15 +2,15 @@
 
 render_template() {
 	local template="${@: -2: 1}"                # get the parameter before last
-				#         |  |___________________ 1 parameter
-				#         |______________________ In the second position counting
-				#                                 from the tail
+				#               |  |___________________ 1 parameter
+				#               |______________________ In the second position counting
+				#                                       from the tail
 
 	local dest="${@: -1}"                       # get the last parameter
-			#         |__________________________ 1 parameter in the first position
-			#                                     from the tail
+			#             |__________________________ 1 parameter in the first position
+			#                                         from the tail
 
-	local context=()                            # initialize context
+	local context=()                        # initialize context
 
 	# create context
 	# context variables comes in the form VARIABLENAME=value
@@ -35,10 +35,18 @@ link_file() {
 	local success_message="Successfully linked ${reset}${bold}${purple}${2}${reset} to ${reset}${bold}${purple}${1}${reset}"
 	local srcfile=$1
 	local dstfile=$2
+	local resetopts=$3
 	local overwrite=
 	local skip=
 	local backup=
 	local same_file=false
+
+	if [[ "${resetopts}" == "-r" ]]; then
+		overwrite_all=false;
+		backup_all=false;
+		skip_all=false;
+	fi;
+
 	if [[ -f $dstfile || -d $dstfile || -L $dstfile ]]; then
 		if [[ "${overwrite_all}" == "false" || "${backup_all}" == "false"|| "${skip_all}" == "false" ]];then
 			if [[ "$(readlink $dstfile)" == "${srcfile}" ]]; then

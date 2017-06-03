@@ -3,15 +3,6 @@
 # Make vim the default editor.
 export EDITOR='vim';
 
-# Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY=~/.node_history;
-# Allow 32³ entries; the default is 1000.
-export NODE_REPL_HISTORY_SIZE='32768';
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy';
-
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8';
 
 # Increase Bash history size. Allow 32³ entries; the default is 500.
 export HISTSIZE='32768';
@@ -43,34 +34,13 @@ export PATH="$(brew --prefix)/heroku/bin:$PATH"
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/local/bin:$HOME/bin:$PATH";
 
-export NVM_DIR=~/.nvm
-
 export SECRET_TOKEN=
 export GH_API_TOKEN=
 export GH_API_USER=
 export GH_API_USER_TOKEN=
 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
 
 complete -W "NSGlobalDomain" defaults;
-export PYENV_ROOT=/usr/local/var/pyenv
 export PATH="/usr/local/sbin:$PATH"
 export GNUTERM=X11
 export OCTAVE_TERMINAL=X11
-export PATH="$PATH:`yarn global bin`"
-
-### Python
-export PYENV_ROOT=$(brew --prefix)/var/pyenv
-export PYTHONPATH=$(brew --prefix)/lib/python3.6/site-packages
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-source $(brew --prefix)/bin/virtualenvwrapper.sh
-export VIRTUALENVWRAPPER_PYTHON=$(brew --prefix)/bin/python
-export VIRTUALENVWRAPPER_VIRTUALENV=$(brew --prefix)/bin/virtualenv
-
-### JAVA
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
-export MAVEN_HOME=$(brew --prefix)/Cellar/maven/3.3.9/
-export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"

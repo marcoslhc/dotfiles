@@ -1,3 +1,3 @@
 install_sdkman () {
-	curl -fsFL "https://get.sdkman.io" > bash;
+	curl -fsL "https://get.sdkman.io" > bash;
 }
