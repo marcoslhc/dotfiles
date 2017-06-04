@@ -39,25 +39,23 @@
       ]
     disabledPackages: [
       "symbols-view"
-      "node-debugger"
-      "proto-repl"
-      "Parinfer"
       "atom-django"
       "django-templates"
-      "ink"
-      "language-assembly"
-      "proto-repl-charts"
       "remote-sync"
+      "whitespace"
     ]
     excludeVcsIgnoredPaths: false
     telemetryConsent: "limited"
     themes: [
-      "isotope-ui"
+      "one-dark-ui"
       "newton-dark-syntax"
     ]
+    titleBar: "hidden"
   editor:
     fontFamily: "Inconsolata for Powerline"
+    fontSize: 16
     invisibles: {}
+    lineHeight: 1.6
     showIndentGuide: true
     showInvisibles: true
     zoomFontWhenCtrlScrolling: true
@@ -77,7 +75,6 @@
     matchEditorFont: true
     spaciousMode: true
   linter:
-    errorPanelHeight: 328
     ignoredLinterErrors: [
       "jscs"
       "jshint"
@@ -101,9 +98,11 @@
     executablePath: "/Users/marcoslh/.rvm/gems/ruby-head/bin/scss-lint"
   "merge-conflicts": {}
   "one-dark-ui":
-    fontSize: "Inconsolata"
-    layoutMode: "Compact"
+    fontSize: 14
   "one-light-ui": {}
+  "one-o-eight-syntax":
+    backgroundVariant: "Dark"
+    foregroundVariant: "Primary"
   pigments: {}
   "platformio-ide-terminal":
     ansiColors:
