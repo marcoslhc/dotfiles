@@ -1,0 +1,154 @@
+"*":
+  "SFTP-deployment": {}
+  "apathy-theme":
+    altFont: "Inconsolata"
+    syntaxBrightness: "70%"
+    syntaxSaturation: "70%"
+  "atom-beautify":
+    general:
+      _analyticsUserId: "e1d6eeb4-09cf-4000-a773-079b89ee1c87"
+    js:
+      indent_size: 2
+  "atom-ctags":
+    autoBuildTagsWhenActive: true
+  "atom-material-ui":
+    compactTreeView: true
+    depth: true
+    panelContrast: true
+    rippleAccentColor: true
+    slimScrollbar: true
+    tabSize: "Small"
+    themeSyle: "Darker"
+  "atom-maven": {}
+  "atom-slime":
+    lispName: "/usr/local/bin/sbcl"
+    slimePath: "/Users/marcoslh/Documents/projects/slime"
+  "atom-typescript": {}
+  core:
+    closeDeletedFileTabs: true
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "symbols-view"
+      "node-debugger"
+      "proto-repl"
+      "Parinfer"
+      "atom-django"
+      "django-templates"
+      "ink"
+      "language-assembly"
+      "proto-repl-charts"
+      "remote-sync"
+    ]
+    excludeVcsIgnoredPaths: false
+    telemetryConsent: "limited"
+    themes: [
+      "isotope-ui"
+      "newton-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Inconsolata for Powerline"
+    invisibles: {}
+    showIndentGuide: true
+    showInvisibles: true
+    zoomFontWhenCtrlScrolling: true
+  emmet: {}
+  "exception-reporting":
+    userId: "bcc1feb0-c38d-daa7-d38e-f72b30ad7c56"
+  "git-log": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "ae213d3c-ec44-46d8-b64d-cf73f6b9ccba"
+  "isotope-ui":
+    backgroundColor: "false"
+    backgroundGradient: true
+    fontFamily: "Source Sans Pro"
+    fontWeight: "Regular"
+    lowContrastTooltip: true
+    matchEditorFont: true
+    spaciousMode: true
+  linter:
+    errorPanelHeight: 328
+    ignoredLinterErrors: [
+      "jscs"
+      "jshint"
+    ]
+    subtleLinterErrors: [
+      "flake8"
+      "pep8"
+    ]
+  "linter-flake8":
+    executablePath: "/usr/local/bin/flake8"
+  "linter-jscs":
+    esnext: true
+    harmony: true
+    onlyConfig: true
+    preset: "jquery"
+    verbose: true
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+    lintInlineJavaScript: true
+  "linter-scss-lint":
+    executablePath: "/Users/marcoslh/.rvm/gems/ruby-head/bin/scss-lint"
+  "merge-conflicts": {}
+  "one-dark-ui":
+    fontSize: "Inconsolata"
+    layoutMode: "Compact"
+  "one-light-ui": {}
+  pigments: {}
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        blue: "#5046c7"
+        cyan: "#14a4ea"
+        green: "#81c92b"
+        magenta: "#fe4386"
+        red: "#ed2c64"
+        white: "#e6e5e5"
+        yellow: "#fec126"
+      zBright:
+        brightBlack: "#666666"
+        brightBlue: "#878eff"
+        brightCyan: "#24d5ff"
+        brightGreen: "#adea90"
+        brightMagenta: "#ff77ff"
+        brightRed: "#ff6767"
+        brightYellow: "#ffdb67"
+    iconColors:
+      blue: "#005493"
+      cyan: "#73fdff"
+      green: "#d4fb79"
+      magenta: "#ff2f92"
+      purple: "#531b93"
+      red: "#ff6767"
+      yellow: "#ffdb67"
+  "proto-repl":
+    autoPrettyPrint: true
+    leinPath: "/usr/local/bin/lein"
+  "remote-sync": {}
+  term2: {}
+  "tree-view":
+    squashDirectoryNames: true
+  "webbox-color":
+    fillColorAsBackground: false
+  welcome:
+    showOnStartup: false
+  "writer-syntax": {}
+".ini.source":
+  editor:
+    tabLength: 4
+".lisp-repl.source":
+  editor:
+    tabLength: 4
+".lisp.source":
+  editor:
+    tabLength: 2
