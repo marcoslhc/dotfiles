@@ -37,6 +37,7 @@ Plugin 'honza/vim-snippets'
 
 " Syntaxes
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-sjx'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
@@ -281,3 +282,6 @@ nnoremap <leader>sv :source $MYVIMRC
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
             \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
             \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+" Activate JSX in js files
+let g:jsx_ext_required = 0
