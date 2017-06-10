@@ -24,6 +24,18 @@
     lispName: "/usr/local/bin/sbcl"
     slimePath: "/Users/marcoslh/Documents/projects/slime"
   "atom-typescript": {}
+  "bracket-matcher":
+    autocompleteCharacters: [
+      "()"
+      "[]"
+      "{}"
+      "\"\""
+      "''"
+      "“”"
+      "‘’"
+      "«»"
+      "‹›"
+    ]
   core:
     closeDeletedFileTabs: true
     customFileTypes:
@@ -45,17 +57,18 @@
       "whitespace"
     ]
     excludeVcsIgnoredPaths: false
-    telemetryConsent: "limited"
-    themes: [
-      "one-dark-ui"
-      "newton-dark-syntax"
+    packagesWithKeymapsDisabled: [
+      "lisp-paredit"
     ]
-    titleBar: "hidden"
+    telemetryConsent: "limited"
+    titleBar: "custom"
   editor:
+    autoIndent: false
     fontFamily: "Inconsolata for Powerline"
     fontSize: 16
     invisibles: {}
     lineHeight: 1.6
+    scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
     zoomFontWhenCtrlScrolling: true
@@ -96,6 +109,43 @@
     lintInlineJavaScript: true
   "linter-scss-lint":
     executablePath: "/Users/marcoslh/.rvm/gems/ruby-head/bin/scss-lint"
+  "linter-ui-default":
+    panelHeight: 64
+    showPanel: true
+  "lisp-paredit":
+    indentationForms: [
+      "try"
+      "catch"
+      "finally"
+      "/^let/"
+      "are"
+      "/^def/"
+      "fn"
+      "cond"
+      "condp"
+      "/^if.*/"
+      "/.*\\/for/"
+      "for"
+      "for-all"
+      "/^when.*/"
+      "testing"
+      "doseq"
+      "dotimes"
+      "ns"
+      "routes"
+      "GET"
+      "POST"
+      "PUT"
+      "DELETE"
+      "extend-protocol"
+      "loop"
+      "do"
+      "case"
+      "with-bindings"
+      "checking"
+      "with-open"
+    ]
+    strict: false
   "merge-conflicts": {}
   "one-dark-ui":
     fontSize: 14
@@ -137,11 +187,20 @@
   term2: {}
   "tree-view":
     squashDirectoryNames: true
+  "vim-mode-plus-ex-mode":
+    notifiedUseExMode: true
   "webbox-color":
     fillColorAsBackground: false
   welcome:
     showOnStartup: false
   "writer-syntax": {}
+".clojure.source":
+  editor:
+    autoIndent: false
+    autoIndentOnPaste: false
+    nonWordCharacters: "()\"':,;~@#$%^&{}[]"
+    scrollPastEnd: true
+    tabLength: 1
 ".ini.source":
   editor:
     tabLength: 4

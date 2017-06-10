@@ -25,3 +25,45 @@
 # https://github.com/bevry/cson#what-is-cson
 'atom-text-editor[data-grammar~="lisp"]':
     'tab': 'lisp-paredit:indent'
+
+# Allows using enter to select an autocomplete suggestion.
+'.platform-darwin atom-text-editor[data-grammar~="clojure"].autocomplete-active':
+  'enter':          'autocomplete-plus:confirm'
+
+'.platform-darwin atom-text-editor[data-grammar~="clojure"]':
+
+  # Indent the current selection
+  'cmd-i':          'lisp-paredit:indent'
+
+  # Expand the selection up a block
+  'ctrl-shift-m':   'lisp-paredit:expand-selection'
+
+  # Provides proper indentation when enter is pressed.
+  # (I disable normal lisp-paredit keybindings)
+#  Override newline back to original for proto-repl
+  'enter':          'lisp-paredit:newline'
+
+  # Helpers for cutting, copying, pasting, deleting, and indenting a
+  # Clojure code
+  'cmd-shift-x':    'jason:cut-sexp'
+  'cmd-shift-c':    'jason:copy-sexp'
+  'cmd-shift-v':    'jason:paste-sexp'
+  'cmd-shift-delete': 'jason:delete-sexp'
+  'cmd-shift-d':    'jason:delete-sexp'
+  'cmd-shift-i':    'jason:indent-top-sexp'
+
+
+# Miscellaneous helpers. Less applicable to clojure code. (optional)
+'.platform-darwin atom-workspace atom-text-editor':
+  'alt-up': 'editor:move-line-up'
+  'alt-down': 'editor:move-line-down'
+  'cmd-alt-down': 'editor:duplicate-lines'
+  'cmd-d': 'editor:delete-line'
+  'ctrl-s':'tree-view:toggle'
+  'cmd-e': 'find-and-replace:select-next'
+  'cmd-alt-ctrl-w': 'editor:toggle-soft-wrap'
+  'alt-backspace': 'editor:delete-to-previous-word-boundary'
+  'alt-delete': 'editor:delete-to-next-word-boundary'
+  'ctrl-d': 'proto-repl:exit-repl'
+  'cmd-l':  'go-to-line:toggle'
+  'ctrl-l': 'proto-repl:clear-repl'
