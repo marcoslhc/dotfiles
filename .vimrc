@@ -37,10 +37,11 @@ Plugin 'honza/vim-snippets'
 
 " Syntaxes
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-sjx'
+Plugin 'mxw/vim-jsx'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'guns/vim-clojure-highlight'
 
 " Code Editing
 Plugin 'terryma/vim-multiple-cursors'             " <Ctrl-n>
@@ -49,6 +50,9 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'Quramy/vim-js-pretty-template'
+Plugin 'vim-scripts/paredit.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'kien/rainbow_parentheses.vim'
 
 " Themes
 Plugin 'fneu/breezy'
@@ -272,6 +276,13 @@ autocmd FileType jsx noremap <buffer> <c-f> :call JsxBeautify()<cr>
 autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
+
+autocmd VimEnter * RainbowParenthesesToggle
+autocmd Syntax clojure RainbowParenthesesLoadRound
+autocmd Syntax clojure RainbowParenthesesLoadSquare
+autocmd Syntax clojure RainbowParenthesesLoadBraces
+
+autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
 
 nnoremap ; :
 
