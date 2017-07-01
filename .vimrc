@@ -296,3 +296,10 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 
 " Activate JSX in js files
 let g:jsx_ext_required = 0
+
+" CtrlP options
+let g:ctrlp_custom_ignore = {
+  \'dir': '\v\./node_modules'
+  \}
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
