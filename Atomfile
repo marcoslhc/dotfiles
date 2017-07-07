@@ -8,7 +8,7 @@ atom-beautify@0.29.26
 atom-django@0.3.2
 atom-typescript@11.0.3
 autocomplete-java@1.2.7
-busy-signal@1.4.1
+busy-signal@1.4.3
 color-picker@2.2.5
 django-templates@0.5.0
 editorconfig@2.2.2
@@ -17,7 +17,8 @@ ex-mode@0.15.0
 file-icons@2.1.7
 git-blame@1.1.1
 git-log@0.4.1
-git-plus@7.9.2
+git-plus@7.9.3
+highlight-selected@0.13.1
 intentions@1.1.2
 language-lisp@0.2.0
 language-matlab@0.2.1
@@ -34,14 +35,17 @@ linter-jscs@4.1.2
 linter-jshint@3.1.2
 linter-python-pep8@0.2.0
 linter-scss-lint@3.1.0
-linter-ui-default@1.6.0
+linter-ui-default@1.6.1
+lisp-paredit@0.5.5
 merge-conflicts@1.4.5
 pigments@0.39.1
 platformio-ide-terminal@2.5.1
 pretty-json@1.6.3
 react@0.16.2
 remote-sync@4.1.5
+set-syntax@0.3.2
 sort-lines@0.14.0
 symbols-tree-view@0.14.0
+tool-bar@1.1.0
 vim-mode-plus@0.93.0
 
