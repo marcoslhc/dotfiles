@@ -4,7 +4,7 @@ install_homebrew () {
 	header "${reset} Installing ${bold}${yellow}Homebrew${reset}"
 	if test ! $(which brew); then
 		if is_macos; then
-			ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > $LOGSDIR/homebrew.log
+			ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" > $LOGSDIR/homebrew.log
 			success "${reset}Homebrew Installed"
 		elif is_linux; then
 			ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)" > $LOGSDIR/Linuxbrew.log
