@@ -40,3 +40,8 @@ link_atomfiles() {
 
 	success "The dotfiles were linked"
 }
+
+install_atom() {
+	install_extensions_from_atomfile
+	link_atomfiles
+}

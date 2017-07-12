@@ -16,6 +16,7 @@ load_libs() {
 		utils
 		git
 		homebrew
+		atom
 		jvm
 	)
 
@@ -66,6 +67,7 @@ link_dotfiles() {
 		.tmux.conf
 		.vimrc
 		.wgetrc
+		.profile
 		envprofiles
 		tmux.sh
 		.tmuxlinerc
@@ -88,6 +90,7 @@ init () {
 	link_dotfiles
 	install_git
 	install_homebrew
+	install_atom
 	install_sdkman
 }
 
