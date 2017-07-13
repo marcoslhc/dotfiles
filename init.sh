@@ -68,6 +68,7 @@ link_dotfiles() {
 		.vimrc
 		.wgetrc
 		.profile
+		init
 		envprofiles
 		tmux.sh
 		.tmuxlinerc
