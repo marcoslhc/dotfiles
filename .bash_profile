@@ -51,7 +51,7 @@ source "$HOME/.profile";
 
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-for file in $(find ~/envprofiles -type f); do
+for file in $(find ~/envprofiles/ -type f); do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done
 unset file;
