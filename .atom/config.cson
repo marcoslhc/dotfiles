@@ -61,6 +61,10 @@
       "lisp-paredit"
     ]
     telemetryConsent: "limited"
+    themes: [
+      "one-light-ui"
+      "newton-dark-syntax"
+    ]
     titleBar: "custom"
   editor:
     autoIndent: false
