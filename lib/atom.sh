@@ -22,7 +22,7 @@ link_atomfiles() {
 		return 0;
 	fi
 
-	local linked_dotfiles=(
+	local dotfiles=(
 		config.cson
 		init.coffee
 		keymap.cson
@@ -34,7 +34,7 @@ link_atomfiles() {
 	local backup_all=false
 	local skip_all=false
 
-	for file in "$linked_dotfiles[@]"; do
+	for file in ${dotfiles[@]}; do
 		link_file "${DOTFILES_ATOMDIR}/${file}" "${HOME_ATOMDIR}/${file}"
 	done;
 
