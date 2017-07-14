@@ -57,6 +57,7 @@ Plugin 'kien/rainbow_parentheses.vim'
 " Themes
 Plugin 'fneu/breezy'
 Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " Tree File Explorer
 Plugin 'scrooloose/nerdtree'
