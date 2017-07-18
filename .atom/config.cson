@@ -67,7 +67,6 @@
     ]
     titleBar: "custom"
   editor:
-    autoIndent: false
     fontFamily: "Inconsolata for Powerline"
     fontSize: 16
     invisibles: {}
