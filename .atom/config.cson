@@ -67,7 +67,7 @@
     ]
     titleBar: "custom"
   editor:
-    fontFamily: "Inconsolata for Powerline"
+    fontFamily: "Fira Code"
     fontSize: 16
     invisibles: {}
     lineHeight: 1.6
@@ -114,7 +114,6 @@
     executablePath: "/Users/marcoslh/.rvm/gems/ruby-head/bin/scss-lint"
   "linter-ui-default":
     panelHeight: 64
-    showPanel: true
   "lisp-paredit":
     indentationForms: [
       "try"
@@ -213,3 +212,9 @@
 ".lisp.source":
   editor:
     tabLength: 2
+".source.ts":
+  editor:
+    autoIndent: true
+".source.tsx":
+  editor:
+    autoIndent: true
