@@ -26,6 +26,24 @@
 'atom-text-editor[data-grammar~="lisp"]':
     'tab': 'lisp-paredit:indent'
 
+# Stop emmet from hijacking tab from snippets and autocomplete
+'atom-text-editor.autocomplete-active:not([mini])':
+  'tab': 'autocomplete-plus:confirm'
+
+# Stop emmet from hijacking tab from snippet tab stops
+'atom-text-editor[data-grammar="text html basic"]:not([mini]),
+ atom-text-editor[data-grammar~="jade"]:not([mini]),
+ atom-text-editor[data-grammar~="css"]:not([mini]),
+ atom-text-editor[data-grammar~="sass"]:not([mini])':
+  'tab': 'snippets:next-tab-stop'
+
+# Emmet for JSX
+'atom-text-editor[data-grammar~="jsx"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'
+
+'atom-text-editor[data-grammar~="js"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'
+
 # Allows using enter to select an autocomplete suggestion.
 '.platform-darwin atom-text-editor[data-grammar~="clojure"].autocomplete-active':
   'enter':          'autocomplete-plus:confirm'
