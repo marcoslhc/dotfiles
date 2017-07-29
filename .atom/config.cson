@@ -55,6 +55,8 @@
       "django-templates"
       "remote-sync"
       "whitespace"
+      "vim-mode-plus"
+      "ex-mode"
     ]
     excludeVcsIgnoredPaths: false
     packagesWithKeymapsDisabled: [
@@ -63,7 +65,7 @@
     telemetryConsent: "limited"
     themes: [
       "one-light-ui"
-      "newton-dark-syntax"
+      "monokai"
     ]
     titleBar: "custom"
   editor:
@@ -182,6 +184,13 @@
       purple: "#531b93"
       red: "#ff6767"
       yellow: "#ffdb67"
+  "prettier-atom":
+    prettierEslintOptions:
+      prettierLast: true
+    prettierOptions:
+      jsxBracketSameLine: true
+      singleQuote: true
+    useEslint: true
   "proto-repl":
     autoPrettyPrint: true
     leinPath: "/usr/local/bin/lein"

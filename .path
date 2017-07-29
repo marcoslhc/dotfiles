@@ -3,3 +3,4 @@
 export PATH="$HOME/local/bin:$HOME/bin:$PATH";
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/bin"¬
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
