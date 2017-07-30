@@ -59,6 +59,7 @@ link_dotfiles() {
 		.gvimrc
 		.hgignore
 		.hushlogin
+		.hyper.js
 		.inputrc
 		.macos
 		.osx
