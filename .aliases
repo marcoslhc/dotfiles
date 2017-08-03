@@ -10,6 +10,7 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+alias boattrader="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir='./proxyTmpDir' -dns-prefetch-disable -proxy-server=127.0.0.1:8888 dev.boattrader.com $*"
 # Shortcuts
 alias dp="~/Dropbox"
 alias d="cd ~/Documents"
