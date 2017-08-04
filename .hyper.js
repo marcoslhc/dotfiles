@@ -5,30 +5,30 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 16,
+    fontSize: 12,
 
     // font family with optional fallbacks
     fontFamily: '"Fira Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248,28,229,0.8)',
+    cursorColor: '#fe4386',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'BLOCK',
+    cursorShape: 'UNDERLINE',
 
     // set to true for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
-    foregroundColor: '#fff',
+    foregroundColor: '#ddd',
 
     // terminal background color
-    backgroundColor: '#000',
+    backgroundColor: 'rgba(44,44,44,.7)',
 
     // border color (window, tabs)
-    borderColor: '#333',
+    borderColor: '#fc2',
 
-    // custom css to embed in the main window
+    // custom css to embsed in the main window
     css: '',
 
     // custom css to embed in the terminal window
