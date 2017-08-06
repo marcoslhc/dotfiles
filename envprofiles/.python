@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+# if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
-export PYENV_ROOT=$(brew --prefix)/var/pyenv
+# export PYENV_ROOT=$(brew --prefix)/var/pyenv
 
-export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
+# export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
