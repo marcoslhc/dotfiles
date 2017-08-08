@@ -19,6 +19,3 @@ if [[ -f $(brew --prefix)/bin/virtualenvwrapper.sh ]]; then
   export WORKON_HOME=$HOME/.virtualenvs
   export PROJECT_HOME=$HOME/Devel
 fi
-
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8';

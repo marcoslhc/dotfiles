@@ -125,7 +125,7 @@
   "linter-scss-lint":
     executablePath: "/Users/marcoslh/.rvm/gems/ruby-head/bin/scss-lint"
   "linter-ui-default":
-    panelHeight: 69
+    panelHeight: 64
     showPanel: true
   "lisp-paredit":
     indentationForms: [
