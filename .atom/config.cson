@@ -168,6 +168,21 @@
   "one-o-eight-syntax":
     backgroundVariant: "Dark"
     foregroundVariant: "Primary"
+  parinfer:
+    "file-extensions": [
+      ".boot"
+      ".cl"
+      ".clj"
+      ".cljc"
+      ".cljs"
+      ".edn"
+      ".el"
+      ".lfe"
+      ".lisp"
+      ".lsp"
+      ".rkt"
+      ".scm"
+    ]
   pigments: {}
   "platformio-ide-terminal":
     ansiColors:
