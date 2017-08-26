@@ -55,8 +55,6 @@
       "django-templates"
       "remote-sync"
       "whitespace"
-      "vim-mode-plus"
-      "ex-mode"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
