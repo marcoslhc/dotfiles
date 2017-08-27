@@ -14,73 +14,73 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin()
+
+call plug#begin('~/.vim/plugged')
 " Plugin management
-Plugin 'gmarik/Vundle.vim'                        " Plugin Manager
+" Plug 'gmarik/Vundle.vim'                        " Plugin Manager
 
 " Terminal access
-Plugin 'rosenfeld/conque-term'                    " :ConqueTerm
+Plug 'rosenfeld/conque-term'                    " :ConqueTerm
 
 " Git
-Plugin 'tpope/vim-fugitive'                       " :Git
-Plugin 'tpope/vim-git'
-Plugin 'jreybert/vimagit'                         " :Magit
+Plug 'tpope/vim-fugitive'                       " :Git
+Plug 'tpope/vim-git'
+Plug 'jreybert/vimagit'                         " :Magit
 
 " Status Line
-Plugin 'vim-airline/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'edkolev/tmuxline.vim'
 
 " Snippets
-Plugin 'mattn/emmet-vim', {'name': 'zenCoding'}   " <Ctrl-y> ,
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plug 'mattn/emmet-vim', { 'name': 'zencoding' }  " <Ctrl-y> ,
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Syntaxes
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'lambdatoast/elm.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'guns/vim-clojure-highlight'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'lambdatoast/elm.vim'
+Plug 'leafgarland/typescript-vim', { 'for': 'javascript' }
+Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 
 " Code Editing
-Plugin 'terryma/vim-multiple-cursors'             " <Ctrl-n>
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'Quramy/tsuquyomi'
-Plugin 'Quramy/vim-js-pretty-template'
-Plugin 'vim-scripts/paredit.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'kien/rainbow_parentheses.vim'
+Plug 'terryma/vim-multiple-cursors'             " <Ctrl-n>
+Plug 'editorconfig/editorconfig-vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
+Plug 'Quramy/tsuquyomi'
+Plug 'Quramy/vim-js-pretty-template', { 'for': 'javascript' }
+Plug 'vim-scripts/paredit.vim', { 'for': 'javascript' }
+Plug 'tpope/vim-surround'
+Plug 'kien/rainbow_parentheses.vim'
 
 " Themes
-Plugin 'fneu/breezy'
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'fneu/breezy'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'nathanaelkane/vim-indent-guides'
 
 " Tree File Explorer
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " File Search
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'mileszs/ack.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mileszs/ack.vim'
 
 " Clojure
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-salve'                          " :help salve
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fireplace'                      " :fireplace
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'tpope/vim-salve', { 'for': 'clojure' }       " :help salve
+Plug 'tpope/vim-projectionist' , { 'for': 'clojure' }
+Plug 'tpope/vim-dispatch', { 'for': 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }   " :fireplace
 
 " Git
-Plugin 'jisaacks/gitgutter'
+Plug 'jisaacks/gitgutter'
 
 " Terminal Integration
-Plugin 'wincent/terminus'
-call vundle#end()
+Plug 'wincent/terminus'
+call plug#end()
 
 set rtp+=~/Documents/Projects/repos/powerline/powerline/bindings/vim
 set guifont=Inconsolata\ for\ Powerline\ Medium:h12
