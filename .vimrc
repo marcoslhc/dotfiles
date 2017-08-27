@@ -32,7 +32,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 
 " Snippets
-Plug 'mattn/emmet-vim', { 'name': 'zencoding' }  " <Ctrl-y> ,
+Plug 'mattn/emmet-vim', { 'as': 'zencoding' }  " <Ctrl-y> ,
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
