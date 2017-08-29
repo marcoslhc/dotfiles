@@ -304,4 +304,6 @@ let g:ctrlp_custom_ignore = {
   \'dir': '\v\./node_modules'
   \}
 
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:50'
+
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
