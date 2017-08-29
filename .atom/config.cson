@@ -92,6 +92,10 @@
   "git-plus":
     general:
       _analyticsUserId: "ae213d3c-ec44-46d8-b64d-cf73f6b9ccba"
+  "go-plus":
+    panel:
+      currentHeight: "29.726651480637813vh"
+      currentWidth: "36.947218259629096vw"
   "isotope-ui":
     backgroundColor: "false"
     backgroundGradient: true

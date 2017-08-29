@@ -14,6 +14,7 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
+set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
 call plug#begin('~/.vim/plugged')
 " Plugin management
