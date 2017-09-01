@@ -36,6 +36,7 @@ linter-jscs
 linter-jshint
 linter-python-pep8
 linter-scss-lint
+linter-shellcheck
 linter-ui-default
 lisp-paredit
 merge-conflicts
