@@ -10,8 +10,8 @@ function calc() {
 		# improve the output for decimal numbers
 		printf "$result" |
 		sed -e 's/^\./0./'        `# add "0" for cases like ".5"` \
-		    -e 's/^-\./-0./'      `# add "0" for cases like "-.5"`\
-		    -e 's/0*$//;s/\.$//';  # remove trailing zeros
+				-e 's/^-\./-0./'      `# add "0" for cases like "-.5"`\
+				-e 's/0*$//;s/\.$//';  # remove trailing zeros
 	else
 		printf "$result";
 	fi;
@@ -87,7 +87,7 @@ fi;
 # Create a data URL from a file
 function dataurl() {
 	local mimeType
-  mimetype=$(file -b --mime-type "$1");
+	mimetype=$(file -b --mime-type "$1");
 
 	if [[ $mimeType == text/* ]]; then
 		mimeType="${mimeType};charset=utf-8";
@@ -117,9 +117,9 @@ function server() {
 # (Requires PHP 5.4.0+.)
 function phpserver() {
 	local port;
-  port="${1:-4000}";
+	port="${1:-4000}";
 	local ip;
-  ip=$(ipconfig getifaddr en1);
+	ip=$(ipconfig getifaddr en1);
 	sleep 1 && open "http://${ip}:${port}/" &
 	php -S "${ip}:${port}";
 }
@@ -127,11 +127,11 @@ function phpserver() {
 # Compare original and gzipped file size
 function gz() {
 	local origsize
-  origsize=$(wc -c < "$1");
+	origsize=$(wc -c < "$1");
 	local gzipsize
-  gzipsize=$(gzip -c "$1" | wc -c);
+	gzipsize=$(gzip -c "$1" | wc -c);
 	local ratio
-  ratio=$(echo "$gzipsize * 100 / $origsize" | bc -l);
+	ratio=$(echo "$gzipsize * 100 / $origsize" | bc -l);
 	printf "orig: %d bytes\n" "$origsize";
 	printf "gzip: %d bytes (%2.2f%%)\n" "$gzipsize" "$ratio";
 }
@@ -191,12 +191,12 @@ function getcertnames() {
 	echo ""; # newline
 
 	local tmp
-  tmp=$(echo -e "GET / HTTP/1.0\nEOT" \
+	tmp=$(echo -e "GET / HTTP/1.0\nEOT" \
 		| openssl s_client -connect "${domain}:443" -servername "${domain}" 2>&1);
 
 	if [[ "${tmp}" = *"-----BEGIN CERTIFICATE-----"* ]]; then
 		local certText
-    certText=$(echo "${tmp}" \
+		certText=$(echo "${tmp}" \
 			| openssl x509 -text -certopt "no_aux, no_header, no_issuer, no_pubkey, \
 			no_serial, no_sigdump, no_signame, no_validity, no_version");
 		echo "Common Name:";
