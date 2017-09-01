@@ -39,7 +39,7 @@ copy_files_git() {
 
 	success:sm "Git dotfiles linked successfully"
 
-	for file in "${generated_dotfiles}"; do
+	for file in "${generated_dotfiles[@]}"; do
 		mv "${TEMPLATEDIR}/${file}" "${HOMEDIR}/${file//.results/}"
 	done
 

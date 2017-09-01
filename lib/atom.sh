@@ -34,7 +34,7 @@ link_atomfiles() {
 	local backup_all=false
 	local skip_all=false
 
-	for file in ${dotfiles[@]}; do
+	for file in "${dotfiles[@]}"; do
 		link_file "${DOTFILES_ATOMDIR}/${file}" "${HOME_ATOMDIR}/${file}"
 	done;
 

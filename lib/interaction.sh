@@ -91,5 +91,3 @@ read_input () {
 	read -e in
 	eval $input="'$in'"
 }
-
-

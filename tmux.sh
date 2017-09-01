@@ -1,7 +1,6 @@
 #!/bin/bash
 SESSION=$(echo $USER | sed -e "s/\./-/")
 
-MAIN_WINDOW_SIZE=$(tput cols)
 PROJECTS_DIR="${HOME}/Documents/projects"
 
 if [[ -z $TMUX ]]; then

@@ -9,7 +9,10 @@ export NODE_REPL_MODE='sloppy';
 
 export NVM_DIR=~/.nvm
 
+#shellcheck source=/dev/null
 [[ -r "$(brew --prefix nvm)/nvm.sh" ]] && source "$(brew --prefix nvm)/nvm.sh";
+
+#shellcheck source=/dev/null
 [[ -r "$(brew --prefix nvm)/bash_completion" ]] && . "$(brew --prefix nvm)/bash_completion";
 
 nvm use stable;

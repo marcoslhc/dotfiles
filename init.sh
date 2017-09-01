@@ -22,7 +22,8 @@ load_libs() {
 
 	# while accessign arrays we need to use curly braces to prevent
 	# interpretation and reference all the values with the @ index
-	for lib in ${libs[@]}; do
+	for lib in "${libs[@]}"; do
+		#shellcheck source=$BASEDIR/lib/${lib}.sh
 		source "$BASEDIR/lib/${lib}.sh"
 	done
 }
@@ -78,7 +79,7 @@ link_dotfiles() {
 	local backup_all=false
 	local skip_all=false
 
-	for file in ${dotfiles[@]}; do
+	for file in "${dotfiles[@]}"; do
 		link_file "${BASEDIR}/${file}" "${HOMEDIR}/${file}"
 	done
 

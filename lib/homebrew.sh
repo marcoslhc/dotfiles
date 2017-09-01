@@ -2,7 +2,7 @@
 
 install_homebrew () {
 	header "${reset} Installing ${bold}${yellow}Homebrew${reset}"
-	if test ! $(which brew); then
+	if test ! "$(which brew)"; then
 		if is_macos; then
 			ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" > $LOGSDIR/homebrew.log
 			success "${reset}Homebrew Installed"
@@ -21,7 +21,7 @@ install_homebrew () {
 }
 
 update_homebrew () {
-	if test $(which brew); then
+	if test "$(which brew)"; then
 		header "${reset} Updating ${bold}${yellow}Homebrew${reset}"
 		info "Check the output logs in ${bold}${purple}$LOGSDIR/Homebrew.log"
 		info "Upgrade"
@@ -35,7 +35,7 @@ update_homebrew () {
 }
 
 install_brewfile () {
-	if test $(which brew); then
+	if test "$(which brew)"; then
 		header "${reset} Installing ${bold}${yellow}Brew Bundle${reset}"
 
 		info "Installing applications in ${reset}${bold}${purple}/Applications${reset}"

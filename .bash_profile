@@ -1,7 +1,9 @@
+#!/usr/bin/env bash
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+  #shellcheck source="$file"
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -36,7 +38,8 @@ done;
 
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-    echo "[ bash completion] loading..."
+	echo "[ bash completion] loading..."
+	#shellcheck source=/dev/null
 	source "$(brew --prefix)/etc/bash_completion";
 fi
 
@@ -58,16 +61,13 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # If possible, add tab completion for many more commands
 [ -f "/etc/bash_completion" ] && source "/etc/bash_completion";
 
+#shellcheck source=$HOME/.profile
 source "$HOME/.profile";
 
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-for file in $(find ~/envprofiles/ -type f); do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done
-unset file;
+find ~/envprofiles/ -type f -exec sh -c 'source $0' {} \;
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/marcoslh/.sdkman"
