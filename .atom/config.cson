@@ -113,6 +113,8 @@
       "flake8"
       "pep8"
     ]
+  "linter-eslint":
+    useGlobalEslint: true
   "linter-flake8":
     executablePath: "/usr/local/bin/flake8"
   "linter-jscs":
@@ -233,6 +235,10 @@
     nonWordCharacters: "()\"':,;~@#$%^&{}[]"
     scrollPastEnd: true
     tabLength: 1
+".editorconfig.source":
+  editor:
+    softWrap: true
+    softWrapAtPreferredLineLength: true
 ".ini.source":
   editor:
     tabLength: 4

@@ -70,5 +70,5 @@ find ~/envprofiles/ -type f -exec sh -c 'source $0' {} \;
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/marcoslh/.sdkman"
-[[ -s "/Users/marcoslh/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/marcoslh/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="${HOME}/.sdkman"
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
