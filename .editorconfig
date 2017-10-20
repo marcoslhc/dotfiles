@@ -10,7 +10,11 @@ indent_size = 2
 
 [*.sh]
 indent_style = tab
-indent_size = 2
+indent_size = 4
+
+[.gitconfig]
+indent_style = tab
+indent_size = 4
 
 [*.py]
 indent_style = space

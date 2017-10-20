@@ -31,6 +31,12 @@
 
 	remotes = remote -v
 
+	# List aliases
+	aliases = config --get-regexp alias
+
+	# Amend the currently staged files to the latest commit
+	amend = commit --amend --reuse-message=HEAD
+
 	# Amend the currently staged files to the latest commit
 	amend = commit --amend --reuse-message=HEAD
 
@@ -39,23 +45,28 @@
 
 	# Interactive rebase with the given number of latest commits
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
-	ci = commit -v
-	pushit = push -u origin HEAD
-	addit = add --interactive
 
+	# Commit w/ verbose message
 	ci = commit -v
 
+	# Push setting track to the upstream branch
 	pushit = push -u origin HEAD
 
+	# Add files with the interactive UI
 	addit = add --interactive
 
+	# fetch from origin and switch to the specified branch
 	branchit = "!r() { git fetch $1 && git checkout $2; }; r"
 
-  fixup = "!f() { git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"; }; f"
+	# Commit a fixup for a previous merge
+	fixup = "!f() { git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"; }; f"
 
-  sqashit = "!s(){ git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\" }; s"
+	# Makes a commit that would be squased
+	sqashit = "!s(){ git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\" }; s"
 
-  rebaseit = "rebase --interactive --autosquash"
+	# Rebase via the UI autosquashing
+	rebaseit = "rebase --interactive --autosquash"
+
 	# Remove the old tag with this name and tag the latest commit with it.
 	retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
 
@@ -76,9 +87,10 @@
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 	# List contributors with number of commits
-    contributors = shortlog --summary --numbered
+	contributors = shortlog --summary --numbered
 
-    u = "!f() { git checkout \"$2\" && git pull --rebase \"$1\" \"$2\" && git push origin \"$2\";}; f"
+	# Updates a branch with remote changes from another branch
+	u = "!f() { git checkout \"$2\" && git pull --rebase \"$1\" \"$2\" && git push origin \"$2\";}; f"
 
 	# Merge GitHub pull request on top of the current branch or,
 	# if a branch name is specified, on top of the specified branch
@@ -121,7 +133,12 @@
 	# Prevent showing files whose names contain non-ASCII symbols as unversioned.
 	# http://michael-kuehnel.de/git/2014/11/21/git-mac-osx-and-german-umlaute.html
 	precomposeunicode = false
-	editor = /usr/bin/vim
+
+	# Speed up commands involving untracked files such as `git status`.
+	# https://git-scm.com/docs/git-update-index#_untracked_cache
+	untrackedCache = true
+
+	editor = /usr/local/bin/vim
 
 [color]
 
@@ -131,7 +148,7 @@
 
 [color "branch"]
 
-	current = blue bold
+	current = blue bold reverse
 	local = yellow
 	remote = green
 
@@ -216,10 +233,11 @@
 	helper = {{HELPER}}
 
 [difftool "sourcetree"]
-	cmd = "opendiff \"$LOCAL\" \"$REMOTE\""
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
 
 [mergetool "sourcetree"]
-	cmd = "/opt/homebrew-cask/Caskroom/sourcetree/2.1/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\""
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
 [url "https://"]
