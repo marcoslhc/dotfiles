@@ -119,7 +119,7 @@ function phpserver() {
 	local port;
 	port="${1:-4000}";
 	local ip;
-	ip=$(ipconfig getifaddr en1);
+	ip=$(ipconfig getifaddr en0);
 	sleep 1 && open "http://${ip}:${port}/" &
 	php -S "${ip}:${port}";
 }
