@@ -66,8 +66,14 @@ source "$HOME/.profile";
 
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-find ~/envprofiles/ -type f -exec sh -c 'source $0' {} \;
+for file in ~/envprofiles/.*; do
+	echo "$file"
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
 
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="${HOME}/.sdkman"
