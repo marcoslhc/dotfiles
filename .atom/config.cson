@@ -57,7 +57,12 @@
       "vim-mode-plus"
       "ex-mode"
       "whitespace"
+      "symbols-tree-view"
+      "hyperclick"
+      "vim-mode-plus"
+      "ex-mode"
     ]
+    excludeVcsIgnoredPaths: false
     ignoredNames: [
       ".git"
       ".hg"
@@ -117,7 +122,7 @@
       "pep8"
     ]
   "linter-eslint":
-    useGlobalEslint: true
+    globalNodePath: "/Users/marcoslh/.nvm/versions/node/v9.2.1"
   "linter-flake8":
     executablePath: "/usr/local/bin/flake8"
   "linter-jscs":
@@ -222,6 +227,7 @@
   term2: {}
   "tree-view":
     squashDirectoryNames: true
+  "vim-mode-plus": {}
   "vim-mode-plus-ex-mode":
     notifiedUseExMode: true
   "webbox-color":
@@ -240,6 +246,7 @@
   editor:
     softWrap: true
     softWrapAtPreferredLineLength: true
+    tabType: "soft"
 ".ini.source":
   editor:
     tabLength: 4

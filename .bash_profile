@@ -71,6 +71,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 for file in ~/envprofiles/.*; do echo "Loading $file" && [[ -f "$file" ]] && source "$file"; done
 
 export PATH="/usr/local/opt/python@2/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="${HOME}/.sdkman"

@@ -63,6 +63,39 @@ prompt_git() {
 	fi;
 }
 
+# Shell prompt based on the Solarized Dark theme.
+# Screenshot: http://i.imgur.com/EkEtphC.png
+# Heavily inspired by @necolas’s prompt: https://github.com/necolas/dotfiles
+# iTerm → Profiles → Text → use 13pt Monaco with 1.1 vertical spacing.
+
+# \e indicates escape sequence (sometimes you'll see \033)
+# the m indicates you've provided a colour sequence
+#
+# 30: Black
+# 31: Red
+# 32: Green
+# 33: Yellow
+# 34: Blue
+# 35: Purple
+# 36: Cyan
+# 37: White
+#
+# a semicolon allows additional attributes:
+#
+# 0: Normal text
+# 1: Bold or light, depending on terminal
+# 4: Underline text
+#
+# there are also background colours (put before additional attributes with ; separator):
+#
+# 40: Black background
+# 41: Red background
+# 42: Green background
+# 43: Yellow background
+# 44: Blue background
+# 45: Purple background
+# 46: Cyan background
+# 47: White background
 if tput setaf 1 &> /dev/null; then
 	tput sgr0; # reset colors
 	bold=$(tput bold);
