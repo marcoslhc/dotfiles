@@ -30,6 +30,10 @@ else # macOS `ls`
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
+# uses Neovim as preferred editor and calls nvim instead of vim
+export VISUAL=nvim
+alias vim=nvim
+
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 
