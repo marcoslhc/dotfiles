@@ -23,6 +23,7 @@ HISTTIMEFORMAT="[%F %T %Z]"
 
 # Append, clear, and read history after each command
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 # Ignore duplicate commands, and commands that start with spaces
 HISTCONTROL='ignoreboth'
 
@@ -66,8 +67,10 @@ source "$HOME/.profile";
 
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-find ~/envprofiles/ -type f -exec sh -c 'source $0' {} \;
+#shellcheck source=~/envprofiles
+for file in ~/envprofiles/.*; do echo "Loading $file" && [[ -f "$file" ]] && source "$file"; done
 
+export PATH="/usr/local/opt/python@2/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="${HOME}/.sdkman"

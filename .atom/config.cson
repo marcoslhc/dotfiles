@@ -54,9 +54,10 @@
       "atom-django"
       "django-templates"
       "remote-sync"
+      "vim-mode-plus"
+      "ex-mode"
       "whitespace"
     ]
-    excludeVcsIgnoredPaths: false
     ignoredNames: [
       ".git"
       ".hg"
@@ -88,6 +89,8 @@
   emmet: {}
   "exception-reporting":
     userId: "bcc1feb0-c38d-daa7-d38e-f72b30ad7c56"
+  "git-blame":
+    columnWidth: 360
   "git-log": {}
   "git-plus":
     general:
@@ -130,7 +133,6 @@
     executablePath: "/Users/marcoslh/.rvm/gems/ruby-head/bin/scss-lint"
   "linter-ui-default":
     panelHeight: 64
-    showPanel: true
   "lisp-paredit":
     indentationForms: [
       "try"
@@ -164,7 +166,6 @@
       "checking"
       "with-open"
     ]
-    strict: false
   "merge-conflicts": {}
   "one-dark-ui":
     fontSize: 14
