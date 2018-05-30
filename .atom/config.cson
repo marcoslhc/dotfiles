@@ -72,6 +72,10 @@
       "symbols-view"
       "remote-sync"
       "whitespace"
+      "symbols-tree-view"
+      "hyperclick"
+      "vim-mode-plus"
+      "ex-mode"
       "linter"
     ]
     excludeVcsIgnoredPaths: false
@@ -90,8 +94,8 @@
     ]
     telemetryConsent: "limited"
     themes: [
-      "one-dark-ui"
-      "newton-dark-syntax"
+      "nord-atom-ui"
+      "nord-atom-syntax"
     ]
     titleBar: "custom"
   editor:
@@ -149,7 +153,7 @@
   "linter-scss-lint":
     executablePath: "/Users/marcoslh/.rvm/gems/ruby-head/bin/scss-lint"
   "linter-ui-default":
-    panelHeight: 281
+    panelHeight: 362
     showPanel: true
   "lisp-paredit":
     indentationForms: [

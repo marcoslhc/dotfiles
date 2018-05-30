@@ -28,9 +28,10 @@ Plug 'tpope/vim-fugitive'                       " :Git
 Plug 'tpope/vim-git'
 Plug 'jreybert/vimagit'                         " :Magit
 
-" Status Line
+" Status Style & Line
 Plug 'vim-airline/vim-airline'
-Plug 'edkolev/tmuxline.vim'
+Plug 'arcticicestudio/nord-vim'
+" Plug 'edkolev/tmuxline.vim'
 
 " Snippets
 Plug 'mattn/emmet-vim', { 'as': 'zencoding' }  " <Ctrl-y> ,
@@ -101,7 +102,7 @@ filetype plugin indent on " required!
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 
 set background=dark
-colorscheme PaperColor
+colorscheme nord
 
 if has("clipboard") && $TMUX == ''
   set clipboard=unnamed " copy to the system clipboard
@@ -307,6 +308,13 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:50'
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
+" Nord Config
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_comment_brightness = 12
+let g:nord_uniform_diff_background = 1
+
 " ## added by OPAM user-setup for vim / base ## 93ee63e278bdfc07d1139a748ed3fff2 ## you can edit, but keep this line
 let s:opam_share_dir = system("opam config var share")
 let s:opam_share_dir = substitute(s:opam_share_dir, '[\r\n]*$', '', '')
