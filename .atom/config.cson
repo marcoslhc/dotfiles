@@ -190,6 +190,8 @@
     ]
     strict: false
   "merge-conflicts": {}
+  "nord-atom-ui":
+    tabSizing: false
   "one-dark-ui":
     fontSize: 14
   "one-light-ui": {}
