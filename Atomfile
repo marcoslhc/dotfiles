@@ -58,6 +58,8 @@ merge-conflicts
 monokai
 newton-dark-syntax
 newton-dark-ui
+nord-atom-syntax
+nord-atom-ui
 parinfer
 pigments
 prettier-atom
@@ -67,5 +69,6 @@ remote-sync
 set-syntax
 sort-lines
 tool-bar
+tesla-atom
 vim-mode-plus
 
