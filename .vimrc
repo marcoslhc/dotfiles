@@ -19,6 +19,7 @@ set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 call plug#begin('~/.vim/plugged')
 " Plugin management
 " Plug 'gmarik/Vundle.vim'                        " Plugin Manager
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " Terminal access
 Plug 'rosenfeld/conque-term'                    " :ConqueTerm
@@ -44,6 +45,7 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'lambdatoast/elm.vim'
 Plug 'leafgarland/typescript-vim', { 'for': 'javascript' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
+Plug 'eagletmt/ghcmod-vim'
 
 " Code Editing
 Plug 'terryma/vim-multiple-cursors'             " <Ctrl-n>
@@ -55,6 +57,7 @@ Plug 'Quramy/vim-js-pretty-template', { 'for': 'javascript' }
 Plug 'vim-scripts/paredit.vim', { 'for': 'javascript' }
 Plug 'tpope/vim-surround'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'w0rp/ale'
 
 " Themes
 Plug 'fneu/breezy'
@@ -83,6 +86,8 @@ Plug 'jisaacks/gitgutter'
 " Terminal Integration
 Plug 'wincent/terminus'
 call plug#end()
+
+let g:airline#extensions#ale#enabled = 1
 
 set rtp+=~/Documents/Projects/repos/powerline/powerline/bindings/vim
 set guifont=Inconsolata\ for\ Powerline\ Medium:h12
@@ -347,3 +352,6 @@ for tool in s:opam_packages
   endif
 endfor
 " ## end of OPAM user-setup addition for vim / base ## keep this line
+nnoremap <Leader>ht :GhcModType<cr>
+nnoremap <Leader>htc :GhcModTypeClear<cr>
+autocmd FileType haskell nnoremap <buffer> <leader>? :call ale#cursor#ShowCursorDetail()<cr>
