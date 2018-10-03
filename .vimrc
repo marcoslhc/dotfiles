@@ -31,6 +31,7 @@ Plug 'jreybert/vimagit'                         " :Magit
 
 " Status Style & Line
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
 " Plug 'edkolev/tmuxline.vim'
 
@@ -62,6 +63,7 @@ Plug 'w0rp/ale'
 " Themes
 Plug 'fneu/breezy'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'ayu-theme/ayu-vim'
 Plug 'nathanaelkane/vim-indent-guides'
 
 " Tree File Explorer
@@ -106,8 +108,10 @@ filetype plugin indent on " required!
 
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 
-set background=dark
-colorscheme nord
+" set background=dark
+"colorscheme nord
+let ayucolor="mirage"
+colorscheme ayu
 
 if has("clipboard") && $TMUX == ''
   set clipboard=unnamed " copy to the system clipboard
@@ -260,6 +264,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:airline_powerline_fonts = 1
+let g:airline_theme='ayu-mirage'
 " let g:airline_theme='breezy'
 
 autocmd StdinReadPre * let s:std_in=1
