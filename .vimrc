@@ -1,5 +1,5 @@
 " if $TERM =~# '\v^(screen|xterm)(-.*)'
-"  set termguicolors
+set termguicolors
 
 "  " set Vim-specific sequences for RGB colors
 "  let &t_8f = "[38;2;%lu;%lu;%lum"
@@ -33,18 +33,19 @@ Plug 'jreybert/vimagit'                         " :Magit
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
-" Plug 'edkolev/tmuxline.vim'
+Plug 'edkolev/tmuxline.vim'
 
 " Snippets
 Plug 'mattn/emmet-vim', { 'as': 'zencoding' }  " <Ctrl-y> ,
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Syntaxes
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'lambdatoast/elm.vim'
-Plug 'leafgarland/typescript-vim', { 'for': 'javascript' }
+Plug 'flowtype/vim-flow', { 'for': 'javascript' }
+" Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'guns/vim-clojure-highlight', { 'for': 'clojure' }
 Plug 'eagletmt/ghcmod-vim'
 
@@ -260,11 +261,11 @@ set splitright
 set splitbelow
 
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:airline_powerline_fonts = 1
-let g:airline_theme='ayu-mirage'
+let g:airline_theme='ayu_mirage'
 " let g:airline_theme='breezy'
 
 autocmd StdinReadPre * let s:std_in=1
