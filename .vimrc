@@ -16,6 +16,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 set rtp+=$GOPATH/src/github.com/golang/lint/misc/vim
 
+set path+=$PATH:expand('~/.cabal/bin')
 call plug#begin('~/.vim/plugged')
 " Plugin management
 " Plug 'gmarik/Vundle.vim'                        " Plugin Manager
