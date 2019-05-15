@@ -94,8 +94,8 @@
     ]
     telemetryConsent: "limited"
     themes: [
-      "nord-atom-ui"
-      "nord-atom-syntax"
+      "one-dark-ui"
+      "newton-dark-syntax"
     ]
     titleBar: "custom"
   editor:
@@ -138,7 +138,8 @@
       "pep8"
     ]
   "linter-eslint":
-    globalNodePath: "/Users/marcoslh/.nvm/versions/node/v9.2.1"
+    global:
+      globalNodePath: "/Users/marcoslh/.nvm/versions/node/v9.2.1"
   "linter-flake8":
     executablePath: "/usr/local/bin/flake8"
   "linter-jscs":
@@ -154,7 +155,6 @@
     executablePath: "/Users/marcoslh/.rvm/gems/ruby-head/bin/scss-lint"
   "linter-ui-default":
     panelHeight: 362
-    showPanel: true
   "lisp-paredit":
     indentationForms: [
       "try"

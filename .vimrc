@@ -1,11 +1,11 @@
-" if $TERM =~# '\v^(screen|xterm)(-.*)'
+if $TERM =~# '\v^(screen|xterm)(-.*)'
 set termguicolors
 
-"  " set Vim-specific sequences for RGB colors
-"  let &t_8f = "[38;2;%lu;%lu;%lum"
-"  let &t_8b = "[48;2;%lu;%lu;%lum"
-"  let &t_Co=256
-"endif
+  " set Vim-specific sequences for RGB colors
+  let &t_8f = "[38;2;%lu;%lu;%lum"
+  let &t_8b = "[48;2;%lu;%lu;%lum"
+  let &t_Co=256
+endif
 
 " Make Vim more useful
 set nocompatible
