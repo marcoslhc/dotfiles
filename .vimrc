@@ -34,7 +34,7 @@ Plug 'jreybert/vimagit'                         " :Magit
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arcticicestudio/nord-vim'
-Plug 'edkolev/tmuxline.vim'
+" Plug 'edkolev/tmuxline.vim'
 
 " Snippets
 Plug 'mattn/emmet-vim', { 'as': 'zencoding' }  " <Ctrl-y> ,

@@ -154,7 +154,7 @@
   "linter-scss-lint":
     executablePath: "/Users/marcoslh/.rvm/gems/ruby-head/bin/scss-lint"
   "linter-ui-default":
-    panelHeight: 362
+    panelHeight: 300
   "lisp-paredit":
     indentationForms: [
       "try"
@@ -240,6 +240,12 @@
       purple: "#531b93"
       red: "#ff6767"
       yellow: "#ffdb67"
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+    prettierEslintOptions:
+      prettierLast: true
+    useEslint: true
   "proto-repl":
     autoPrettyPrint: true
     leinPath: "/usr/local/bin/lein"
