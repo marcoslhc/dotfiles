@@ -27,7 +27,7 @@ EditorConfig==0.12.1
 enum34==1.1.6
 file-magic==0.3.0
 flake8==3.3.0
-Flask==0.11.1
+Flask==1.0
 funcsigs==1.0.2
 future==0.16.0
 futures==3.1.1
