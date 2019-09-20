@@ -155,6 +155,7 @@
     executablePath: "/Users/marcoslh/.rvm/gems/ruby-head/bin/scss-lint"
   "linter-ui-default":
     panelHeight: 300
+    showPanel: true
   "lisp-paredit":
     indentationForms: [
       "try"
@@ -188,7 +189,6 @@
       "checking"
       "with-open"
     ]
-    strict: false
   "merge-conflicts": {}
   "nord-atom-ui":
     tabSizing: false
