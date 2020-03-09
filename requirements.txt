@@ -57,7 +57,7 @@ passlib==1.7.1
 pathtools==0.1.2
 pbr==3.0.1
 pep8==1.7.0
-Pillow==4.1.1
+Pillow==6.2.0
 pkginfo==1.4.1
 psutil==5.2.2
 pyasn1==0.2.3
